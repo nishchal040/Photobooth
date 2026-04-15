@@ -100,6 +100,7 @@ downloadBtn.addEventListener("click", () => {
     let y = topPadding;
 
 images.forEach((img) => {
+    ctx.filter = currentFilter;
     ctx.fillStyle = "white";
     ctx.fillRect(0, y, canvas.width, boxHeight + verticalPadding * 2);
 
@@ -118,6 +119,7 @@ images.forEach((img) => {
 
     y += boxHeight + verticalPadding * 2 ;
 });
+    ctx.filter = "none";
 
     // Download
     const link = document.createElement("a");
