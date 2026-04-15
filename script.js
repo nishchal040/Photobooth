@@ -83,34 +83,37 @@ downloadBtn.addEventListener("click", () => {
     const canvas = document.createElement("canvas");
     const ctx = canvas.getContext("2d");
 
-    const width = 300;
-    const height = 180; // 🔥 smaller height (compact look)
     const padding = 15;
+
+    // 🔥 Detect mobile
+    const isMobile = window.innerWidth < 600;
+
+    // ✅ Smaller image on mobile
+    const width = isMobile ? 220 : 300;
+    const height = isMobile ? 140 : 180;
 
     canvas.width = width + padding * 2;
     canvas.height = images.length * (height + padding * 2);
 
     let y = 0;
 
-    images.forEach((img, index) => {
-        // white polaroid background
+    images.forEach((img) => {
+        // Background (UNCHANGED padding)
         ctx.fillStyle = "white";
         ctx.fillRect(0, y, canvas.width, height + padding * 2);
 
-        // 🔥 Crop center (NO distortion)
+        // Crop center (NO distortion)
         const imgRatio = img.naturalWidth / img.naturalHeight;
         const targetRatio = width / height;
 
         let sx, sy, sWidth, sHeight;
 
         if (imgRatio > targetRatio) {
-            // image is wider → crop sides
             sHeight = img.naturalHeight;
             sWidth = sHeight * targetRatio;
             sx = (img.naturalWidth - sWidth) / 2;
             sy = 0;
         } else {
-            // image is taller → crop top/bottom
             sWidth = img.naturalWidth;
             sHeight = sWidth / targetRatio;
             sx = 0;
