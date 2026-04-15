@@ -19,7 +19,7 @@ video{
     border-radius: 10px;
     background:white;
     width: 500px;
-    height: 500px;
+    height: auto; /* JS will set height based on real camera aspect ratio */
 }
 #filters{
     width: 100%;
@@ -78,7 +78,7 @@ button:hover {
 @media screen and (max-width:750px) {
     .container video{
         width: 300px;
-        height: 300px;
+        height: auto;
     }
     button{
         font-size: 13px;
@@ -89,4 +89,3 @@ button:hover {
         flex-shrink: 0;
     }
 }
-
