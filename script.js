@@ -90,35 +90,34 @@ downloadBtn.addEventListener("click", () => {
     const boxWidth = isMobile ? 220 : 300;
     const boxHeight = isMobile ? 180 : 220;
 
-    const padding = 5;
-    const paddingTop=40; // matches UI    // space between photos
+    const horizontalPadding = 6;  // 👈 reduce this (side space)
+    const verticalPadding = 10;   // 👈 keep this same
+    const topPadding = 40;
 
-    canvas.width = boxWidth + padding * 2;
-    canvas.height = paddingTop +  images.length * (boxHeight + padding * 2 );
+    canvas.width = boxWidth + horizontalPadding * 2;
+    canvas.height = topPadding + images.length * (boxHeight + verticalPadding * 2 );
 
-    let y = paddingTop;
+    let y = topPadding;
 
-    images.forEach((img) => {
-        // White background (polaroid)
-        ctx.fillStyle = "white";
-        ctx.fillRect(0, y, canvas.width, boxHeight + padding * 2);
+images.forEach((img) => {
+    ctx.fillStyle = "white";
+    ctx.fillRect(0, y, canvas.width, boxHeight + verticalPadding * 2);
 
-        // 🔥 SCALE (no crop, no distortion)
-        const scale = Math.min(
-            boxWidth / img.naturalWidth,
-            boxHeight / img.naturalHeight
-        );
+    const scale = Math.min(
+        boxWidth / img.naturalWidth,
+        boxHeight / img.naturalHeight
+    );
 
-        const drawWidth = img.naturalWidth * scale;
-        const drawHeight = img.naturalHeight * scale;
+    const drawWidth = img.naturalWidth * scale;
+    const drawHeight = img.naturalHeight * scale;
 
-        const x = padding + (boxWidth - drawWidth) / 2;
-        const yPos = y + padding + (boxHeight - drawHeight) / 2;
+    const x = horizontalPadding + (boxWidth - drawWidth) / 2;
+    const yPos = y + verticalPadding + (boxHeight - drawHeight) / 2;
 
-        ctx.drawImage(img, x, yPos, drawWidth, drawHeight);
+    ctx.drawImage(img, x, yPos, drawWidth, drawHeight);
 
-        y += boxHeight + padding * 2;
-    });
+    y += boxHeight + verticalPadding * 2 ;
+});
 
     // Download
     const link = document.createElement("a");
