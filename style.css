@@ -86,7 +86,7 @@ button:hover {
     }
     .photo{
         width: 100px;
-        object-fit: contain;
+        flex-shrink: 0;
     }
 }
 
