@@ -12,31 +12,34 @@ const maxPhotos = 3;
 // 🎥 Start Camera
 async function startCamera() {
     try {
-        const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+        const stream = await navigator.mediaDevices.getUserMedia({
+            video: {
+                facingMode: "user",
+                width: { ideal: 1080 },
+                height: { ideal: 1080 }
+            }
+        });
         camera.srcObject = stream;
     } catch (err) {
         console.error("Camera error:", err);
     }
 }
-
 startCamera();
 
-// 📸 Capture Photo (FIXED)
+// 📸 Capture Photo (filter applied)
 function capturePhoto() {
     const context = canvas.getContext("2d");
 
     canvas.width = camera.videoWidth;
     canvas.height = camera.videoHeight;
 
-    // ✅ Apply filter during capture
     context.filter = currentFilter;
-
     context.drawImage(camera, 0, 0, canvas.width, canvas.height);
 
     return canvas.toDataURL("image/png");
 }
 
-// 📸 Snap Button
+// 📸 Snap
 snapBtn.addEventListener("click", () => {
     if (count >= maxPhotos) {
         alert("You already took 3 photos!");
@@ -59,11 +62,9 @@ snapBtn.addEventListener("click", () => {
     }
 });
 
-// 🎨 Filter Buttons
+// 🎨 Filters
 filterButtons.forEach(btn => {
     btn.addEventListener("click", () => {
-
-        // UI active state
         filterButtons.forEach(b => b.classList.remove("active"));
         btn.classList.add("active");
 
@@ -71,7 +72,7 @@ filterButtons.forEach(btn => {
     });
 });
 
-// ⬇️ Download (FIXED + CLEAN)
+// ⬇️ Download (FINAL PERFECT VERSION)
 downloadBtn.addEventListener("click", () => {
     const images = document.querySelectorAll("#photos img");
 
@@ -83,22 +84,22 @@ downloadBtn.addEventListener("click", () => {
     const canvas = document.createElement("canvas");
     const ctx = canvas.getContext("2d");
 
-    const padding = 15;
-
-    // 📱 mobile check
     const isMobile = window.innerWidth < 600;
 
-    // 🔥 smaller box on mobile
+    // 🔥 Image box size (only image changes, padding stays same)
     const boxWidth = isMobile ? 220 : 300;
     const boxHeight = isMobile ? 180 : 220;
 
+    const padding = 10; // matches UI
+    const gap = 10;     // space between photos
+
     canvas.width = boxWidth + padding * 2;
-    canvas.height = images.length * (boxHeight + padding * 2);
+    canvas.height = images.length * (boxHeight + padding * 2 + gap);
 
     let y = 0;
 
     images.forEach((img) => {
-        // white background
+        // White background (polaroid)
         ctx.fillStyle = "white";
         ctx.fillRect(0, y, canvas.width, boxHeight + padding * 2);
 
@@ -111,15 +112,15 @@ downloadBtn.addEventListener("click", () => {
         const drawWidth = img.naturalWidth * scale;
         const drawHeight = img.naturalHeight * scale;
 
-        // center image
         const x = padding + (boxWidth - drawWidth) / 2;
         const yPos = y + padding + (boxHeight - drawHeight) / 2;
 
         ctx.drawImage(img, x, yPos, drawWidth, drawHeight);
 
-        y += boxHeight + padding * 2;
+        y += boxHeight + padding * 2 + gap;
     });
 
+    // Download
     const link = document.createElement("a");
     link.download = "photobooth.png";
     link.href = canvas.toDataURL("image/png");
