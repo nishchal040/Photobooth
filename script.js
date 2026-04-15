@@ -91,7 +91,7 @@ downloadBtn.addEventListener("click", () => {
     const boxHeight = isMobile ? 180 : 220;
 
     const padding = 5;
-    const paddingTop=30; // matches UI    // space between photos
+    const paddingTop=40; // matches UI    // space between photos
 
     canvas.width = boxWidth + padding * 2;
     canvas.height = paddingTop +  images.length * (boxHeight + padding * 2 );
