@@ -3,43 +3,33 @@ const canvas = document.getElementById("canvas");
 const snapBtn = document.getElementById("snap");
 const photosDiv = document.getElementById("photos");
 const filterButtons = document.querySelectorAll("#filters button");
-const downloadBtn = document.getElementById("download");
 
 let currentFilter = "none";
 let count = 0;
 const maxPhotos = 3;
 
-// 🎥 Start Camera
+const rawImageDataURLs = [];
+
 async function startCamera() {
     try {
-        const stream = await navigator.mediaDevices.getUserMedia({
-            video: {
-                facingMode: "user",
-                width: { ideal: 1080 },
-                height: { ideal: 1080 }
-            }
-        });
+        const stream = await navigator.mediaDevices.getUserMedia({ video: true });
         camera.srcObject = stream;
     } catch (err) {
         console.error("Camera error:", err);
     }
 }
+
 startCamera();
 
-// 📸 Capture Photo (filter applied)
 function capturePhoto() {
     const context = canvas.getContext("2d");
-
     canvas.width = camera.videoWidth;
     canvas.height = camera.videoHeight;
-
-    context.filter = currentFilter;
+    context.filter = "none";
     context.drawImage(camera, 0, 0, canvas.width, canvas.height);
-
     return canvas.toDataURL("image/png");
 }
 
-// 📸 Snap
 snapBtn.addEventListener("click", () => {
     if (count >= maxPhotos) {
         alert("You already took 3 photos!");
@@ -47,11 +37,11 @@ snapBtn.addEventListener("click", () => {
     }
 
     const imgData = capturePhoto();
+    rawImageDataURLs.push(imgData);
 
     const img = document.createElement("img");
     img.src = imgData;
     img.classList.add("photo");
-
     photosDiv.appendChild(img);
 
     count++;
@@ -62,82 +52,79 @@ snapBtn.addEventListener("click", () => {
     }
 });
 
-// 🎨 Filters
 filterButtons.forEach(btn => {
     btn.addEventListener("click", () => {
         filterButtons.forEach(b => b.classList.remove("active"));
         btn.classList.add("active");
+        currentFilter = btn.dataset.filter;
 
-        const filterMap = {
-    "grayscale": "grayscale(1)",
-    "sepia": "sepia(1)",
-    "blur": "blur(4px)",
-    "none": "none"
-};
-
-currentFilter = filterMap[btn.dataset.filter] || "none";const filterMap = {
-    "grayscale": "grayscale(1)",
-    "sepia": "sepia(1)",
-    "blur": "blur(4px)",
-    "none": "none"
-};
-
-currentFilter = filterMap[btn.dataset.filter] || "none";
+        const images = document.querySelectorAll("#photos img");
+        images.forEach(img => {
+            img.style.filter = currentFilter;
+        });
     });
 });
 
-// ⬇️ Download (FINAL PERFECT VERSION)
-downloadBtn.addEventListener("click", () => {
-    const images = document.querySelectorAll("#photos img");
+const downloadBtn = document.getElementById("download");
 
-    if (images.length === 0) {
+downloadBtn.addEventListener("click", () => {
+    if (rawImageDataURLs.length === 0) {
         alert("No photos to download!");
         return;
     }
 
-    const canvas = document.createElement("canvas");
-    const ctx = canvas.getContext("2d");
+    // Replicate exactly what the UI shows:
+    // #photos div: white bg, padding-top:50px, padding-bottom:10px
+    // .photo: width:200px, margin:5px on all sides
+    // Image height is naturally proportional — we use the actual rendered img size
 
-    const isMobile = window.innerWidth < 600;
+    const photoImgs = document.querySelectorAll("#photos img");
 
-    // 🔥 Image box size (only image changes, padding stays same)
-    const boxWidth = isMobile ? 220 : 300;
-    const boxHeight = isMobile ? 180 : 220;
+    // Use actual rendered dimensions from the DOM
+    const firstImg = photoImgs[0];
+    const renderedW = firstImg.offsetWidth;   // should be 200
+    const renderedH = firstImg.offsetHeight;  // natural proportional height
 
-    const horizontalPadding = 6;  // 👈 reduce this (side space)
-    const verticalPadding = 10;   // 👈 keep this same
-    const topPadding = 40;
+    const margin = 5;
+    const padTop = 50;
+    const padBottom = 10;
+    const padSide = 15; // slight side padding to match visual
 
-    canvas.width = boxWidth + horizontalPadding * 2;
-    canvas.height = topPadding + images.length * (boxHeight + verticalPadding * 2 );
+    const cardW = padSide + renderedW + padSide;
+    const totalH = padTop
+        + rawImageDataURLs.length * (renderedH + margin * 2)
+        + padBottom;
 
-    let y = topPadding;
+    const outputCanvas = document.createElement("canvas");
+    outputCanvas.width = cardW;
+    outputCanvas.height = totalH;
+    const ctx = outputCanvas.getContext("2d");
 
-images.forEach((img) => {
-    ctx.filter = currentFilter;
+    // Full white card background — this is what makes it look like the UI
     ctx.fillStyle = "white";
-    ctx.fillRect(0, y, canvas.width, boxHeight + verticalPadding * 2);
+    ctx.fillRect(0, 0, cardW, totalH);
 
-    const scale = Math.min(
-        boxWidth / img.naturalWidth,
-        boxHeight / img.naturalHeight
-    );
+    let loadedCount = 0;
 
-    const drawWidth = img.naturalWidth * scale;
-    const drawHeight = img.naturalHeight * scale;
+    rawImageDataURLs.forEach((dataURL, index) => {
+        const img = new Image();
+        img.onload = () => {
+            const x = padSide + margin;
+            const y = padTop + index * (renderedH + margin * 2) + margin;
 
-    const x = horizontalPadding + (boxWidth - drawWidth) / 2;
-    const yPos = y + verticalPadding + (boxHeight - drawHeight) / 2;
+            // Apply the currently selected filter when drawing
+            ctx.filter = (currentFilter && currentFilter !== "none") ? currentFilter : "none";
+            ctx.drawImage(img, x, y, renderedW - margin, renderedH);
+            ctx.filter = "none";
 
-    ctx.drawImage(img, x, yPos, drawWidth, drawHeight);
-
-    y += boxHeight + verticalPadding * 2 ;
-});
-    ctx.filter = "none";
-
-    // Download
-    const link = document.createElement("a");
-    link.download = "photobooth.png";
-    link.href = canvas.toDataURL("image/png");
-    link.click();
+            loadedCount++;
+            if (loadedCount === rawImageDataURLs.length) {
+                const link = document.createElement("a");
+                link.download = "photobooth.png";
+                link.href = outputCanvas.toDataURL("image/png");
+                link.click();
+            }
+        };
+        img.src = dataURL;
+    });
 });
