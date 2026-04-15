@@ -90,11 +90,10 @@ downloadBtn.addEventListener("click", () => {
     const boxWidth = isMobile ? 220 : 300;
     const boxHeight = isMobile ? 180 : 220;
 
-    const padding = 10; // matches UI
-    const gap = 10;     // space between photos
+    const padding = 10; // matches UI    // space between photos
 
     canvas.width = boxWidth + padding * 2;
-    canvas.height = images.length * (boxHeight + padding * 2 + gap);
+    canvas.height = images.length * (boxHeight + padding * 2 );
 
     let y = 0;
 
@@ -117,7 +116,7 @@ downloadBtn.addEventListener("click", () => {
 
         ctx.drawImage(img, x, yPos, drawWidth, drawHeight);
 
-        y += boxHeight + padding * 2 + gap;
+        y += boxHeight + padding * 2;
     });
 
     // Download
