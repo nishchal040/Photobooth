@@ -84,5 +84,8 @@ button:hover {
         font-size: 13px;
         padding: 10px;
     }
+    .photo{
+        object-fit: contain;
+    }
 }
 
