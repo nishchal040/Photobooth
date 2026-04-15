@@ -90,12 +90,13 @@ downloadBtn.addEventListener("click", () => {
     const boxWidth = isMobile ? 220 : 300;
     const boxHeight = isMobile ? 180 : 220;
 
-    const padding = 10; // matches UI    // space between photos
+    const padding = 5;
+    const paddingTop=30; // matches UI    // space between photos
 
     canvas.width = boxWidth + padding * 2;
-    canvas.height = images.length * (boxHeight + padding * 2 );
+    canvas.height = paddingTop +  images.length * (boxHeight + padding * 2 );
 
-    let y = 0;
+    let y = paddingTop;
 
     images.forEach((img) => {
         // White background (polaroid)
