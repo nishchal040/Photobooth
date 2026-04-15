@@ -83,38 +83,51 @@ downloadBtn.addEventListener("click", () => {
     const canvas = document.createElement("canvas");
     const ctx = canvas.getContext("2d");
 
-    const imgWidth = 300;
-    const imgHeight = 200;
+    const maxWidth = 300;
     const padding = 20;
 
-    canvas.width = imgWidth + padding * 2;
-    canvas.height = images.length * (imgHeight + padding * 2);
+    // 🔥 Calculate total height dynamically
+    let totalHeight = 0;
+
+    const sizes = [];
+
+    images.forEach(img => {
+        const ratio = img.naturalHeight / img.naturalWidth;
+        const height = maxWidth * ratio;
+
+        sizes.push({ width: maxWidth, height });
+        totalHeight += height + padding * 2;
+    });
+
+    canvas.width = maxWidth + padding * 2;
+    canvas.height = totalHeight;
 
     let y = 0;
 
     images.forEach((img, index) => {
+        const { width, height } = sizes[index];
+
         // Polaroid background
         ctx.fillStyle = "white";
-        ctx.fillRect(0, y, canvas.width, imgHeight + padding * 2);
+        ctx.fillRect(0, y, canvas.width, height + padding * 2);
 
-        // Draw image
+        // Draw image (NO DISTORTION)
         ctx.drawImage(
             img,
             padding,
             y + padding,
-            imgWidth,
-            imgHeight
+            width,
+            height
         );
 
-        // Optional: caption (🔥 makes it look pro)
+        // Caption (optional)
         ctx.fillStyle = "#555";
         ctx.font = "14px Poppins";
-        ctx.fillText(`Photo ${index + 1}`, 10, y + imgHeight + 30);
+        ctx.fillText(`Photo ${index + 1}`, 10, y + height + 25);
 
-        y += imgHeight + padding * 2;
+        y += height + padding * 2;
     });
 
-    // Download image
     const link = document.createElement("a");
     link.download = "photobooth.png";
     link.href = canvas.toDataURL("image/png");
