@@ -10,15 +10,15 @@ const maxPhotos = 3;
 
 const rawImageDataURLs = [];
 
-// Fixed capture box — same on all devices, matches desktop .photo display size
-const CAPTURE_W = 200;
-const CAPTURE_H = 150;
+// Fixed output size for every captured photo — same on all devices
+const CAPTURE_W = 400;
+const CAPTURE_H = 300; // 4:3 aspect ratio, consistent everywhere
 
 async function startCamera() {
     try {
         const stream = await navigator.mediaDevices.getUserMedia({
             video: {
-                facingMode: "user",
+                facingMode: "user",      // front camera on mobile
                 width: { ideal: 1280 },
                 height: { ideal: 720 }
             }
@@ -34,27 +34,35 @@ startCamera();
 function capturePhoto() {
     const context = canvas.getContext("2d");
 
-    const vw = camera.videoWidth;
-    const vh = camera.videoHeight;
-
-    // Scale video to fit inside CAPTURE_W x CAPTURE_H, preserving aspect ratio (no crop)
-    const scale = Math.min(CAPTURE_W / vw, CAPTURE_H / vh);
-    const drawW = Math.round(vw * scale);
-    const drawH = Math.round(vh * scale);
-
-    // Center it inside the fixed box
-    const offsetX = Math.round((CAPTURE_W - drawW) / 2);
-    const offsetY = Math.round((CAPTURE_H - drawH) / 2);
-
+    // Always output at fixed CAPTURE_W x CAPTURE_H regardless of device camera resolution
     canvas.width = CAPTURE_W;
     canvas.height = CAPTURE_H;
 
-    // White background so letterbox areas are white (matches polaroid look)
-    context.fillStyle = "white";
-    context.fillRect(0, 0, CAPTURE_W, CAPTURE_H);
+    const vw = camera.videoWidth;
+    const vh = camera.videoHeight;
+
+    // Center-crop the video feed to fill CAPTURE_W x CAPTURE_H (no stretching)
+    const targetAspect = CAPTURE_W / CAPTURE_H;
+    const sourceAspect = vw / vh;
+
+    let sx, sy, sw, sh;
+
+    if (sourceAspect > targetAspect) {
+        // Video is wider than target — crop sides
+        sh = vh;
+        sw = Math.round(vh * targetAspect);
+        sx = Math.round((vw - sw) / 2);
+        sy = 0;
+    } else {
+        // Video is taller than target — crop top/bottom
+        sw = vw;
+        sh = Math.round(vw / targetAspect);
+        sx = 0;
+        sy = Math.round((vh - sh) / 2);
+    }
 
     context.filter = "none";
-    context.drawImage(camera, 0, 0, vw, vh, offsetX, offsetY, drawW, drawH);
+    context.drawImage(camera, sx, sy, sw, sh, 0, 0, CAPTURE_W, CAPTURE_H);
 
     return canvas.toDataURL("image/png");
 }
@@ -102,12 +110,14 @@ downloadBtn.addEventListener("click", () => {
         return;
     }
 
-    const photoW = CAPTURE_W;  // 200px
-    const photoH = CAPTURE_H;  // 150px
+    // All captured images are CAPTURE_W x CAPTURE_H (400x300)
+    // Scale them down for the polaroid strip — same ratio on all devices
+    const photoW = 220;
+    const photoH = Math.round(photoW * (CAPTURE_H / CAPTURE_W)); // keeps 4:3 = 165px
 
-    const margin = 5;
+    const margin = 6;
     const padTop = 50;
-    const padBottom = 10;
+    const padBottom = 15;
     const padSide = 15;
 
     const cardW = padSide + photoW + padSide;
@@ -132,6 +142,7 @@ downloadBtn.addEventListener("click", () => {
             const x = padSide;
             const y = padTop + index * (photoH + margin * 2) + margin;
 
+            // Bake the selected filter into the downloaded image
             ctx.filter = (currentFilter && currentFilter !== "none") ? currentFilter : "none";
             ctx.drawImage(img, x, y, photoW, photoH);
             ctx.filter = "none";
