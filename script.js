@@ -10,6 +10,10 @@ const maxPhotos = 3;
 
 const rawImageDataURLs = [];
 
+// Fixed capture box — same on all devices, matches desktop .photo display size
+const CAPTURE_W = 200;
+const CAPTURE_H = 150;
+
 async function startCamera() {
     try {
         const stream = await navigator.mediaDevices.getUserMedia({
@@ -33,14 +37,24 @@ function capturePhoto() {
     const vw = camera.videoWidth;
     const vh = camera.videoHeight;
 
-    // Scale down to max 400px wide while preserving full aspect ratio — no crop, no stretch
-    const maxW = 400;
-    const scale = Math.min(maxW / vw, 1);
-    canvas.width = Math.round(vw * scale);
-    canvas.height = Math.round(vh * scale);
+    // Scale video to fit inside CAPTURE_W x CAPTURE_H, preserving aspect ratio (no crop)
+    const scale = Math.min(CAPTURE_W / vw, CAPTURE_H / vh);
+    const drawW = Math.round(vw * scale);
+    const drawH = Math.round(vh * scale);
+
+    // Center it inside the fixed box
+    const offsetX = Math.round((CAPTURE_W - drawW) / 2);
+    const offsetY = Math.round((CAPTURE_H - drawH) / 2);
+
+    canvas.width = CAPTURE_W;
+    canvas.height = CAPTURE_H;
+
+    // White background so letterbox areas are white (matches polaroid look)
+    context.fillStyle = "white";
+    context.fillRect(0, 0, CAPTURE_W, CAPTURE_H);
 
     context.filter = "none";
-    context.drawImage(camera, 0, 0, canvas.width, canvas.height);
+    context.drawImage(camera, 0, 0, vw, vh, offsetX, offsetY, drawW, drawH);
 
     return canvas.toDataURL("image/png");
 }
@@ -88,53 +102,48 @@ downloadBtn.addEventListener("click", () => {
         return;
     }
 
-    // Load first image to get its natural dimensions (already scaled at capture)
-    const firstLoader = new Image();
-    firstLoader.onload = () => {
-        const photoW = firstLoader.naturalWidth;
-        const photoH = firstLoader.naturalHeight;
+    const photoW = CAPTURE_W;  // 200px
+    const photoH = CAPTURE_H;  // 150px
 
-        const margin = 6;
-        const padTop = 50;
-        const padBottom = 15;
-        const padSide = 15;
+    const margin = 5;
+    const padTop = 50;
+    const padBottom = 10;
+    const padSide = 15;
 
-        const cardW = padSide + photoW + padSide;
-        const totalH = padTop
-            + rawImageDataURLs.length * (photoH + margin * 2)
-            + padBottom;
+    const cardW = padSide + photoW + padSide;
+    const totalH = padTop
+        + rawImageDataURLs.length * (photoH + margin * 2)
+        + padBottom;
 
-        const outputCanvas = document.createElement("canvas");
-        outputCanvas.width = cardW;
-        outputCanvas.height = totalH;
-        const ctx = outputCanvas.getContext("2d");
+    const outputCanvas = document.createElement("canvas");
+    outputCanvas.width = cardW;
+    outputCanvas.height = totalH;
+    const ctx = outputCanvas.getContext("2d");
 
-        // White polaroid card background
-        ctx.fillStyle = "white";
-        ctx.fillRect(0, 0, cardW, totalH);
+    // White polaroid card background
+    ctx.fillStyle = "white";
+    ctx.fillRect(0, 0, cardW, totalH);
 
-        let loadedCount = 0;
+    let loadedCount = 0;
 
-        rawImageDataURLs.forEach((dataURL, index) => {
-            const img = new Image();
-            img.onload = () => {
-                const x = padSide;
-                const y = padTop + index * (photoH + margin * 2) + margin;
+    rawImageDataURLs.forEach((dataURL, index) => {
+        const img = new Image();
+        img.onload = () => {
+            const x = padSide;
+            const y = padTop + index * (photoH + margin * 2) + margin;
 
-                ctx.filter = (currentFilter && currentFilter !== "none") ? currentFilter : "none";
-                ctx.drawImage(img, x, y, photoW, photoH);
-                ctx.filter = "none";
+            ctx.filter = (currentFilter && currentFilter !== "none") ? currentFilter : "none";
+            ctx.drawImage(img, x, y, photoW, photoH);
+            ctx.filter = "none";
 
-                loadedCount++;
-                if (loadedCount === rawImageDataURLs.length) {
-                    const link = document.createElement("a");
-                    link.download = "photobooth.png";
-                    link.href = outputCanvas.toDataURL("image/png");
-                    link.click();
-                }
-            };
-            img.src = dataURL;
-        });
-    };
-    firstLoader.src = rawImageDataURLs[0];
+            loadedCount++;
+            if (loadedCount === rawImageDataURLs.length) {
+                const link = document.createElement("a");
+                link.download = "photobooth.png";
+                link.href = outputCanvas.toDataURL("image/png");
+                link.click();
+            }
+        };
+        img.src = dataURL;
+    });
 });
