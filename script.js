@@ -68,7 +68,21 @@ filterButtons.forEach(btn => {
         filterButtons.forEach(b => b.classList.remove("active"));
         btn.classList.add("active");
 
-        currentFilter = btn.dataset.filter;
+        const filterMap = {
+    "grayscale": "grayscale(1)",
+    "sepia": "sepia(1)",
+    "blur": "blur(4px)",
+    "none": "none"
+};
+
+currentFilter = filterMap[btn.dataset.filter] || "none";const filterMap = {
+    "grayscale": "grayscale(1)",
+    "sepia": "sepia(1)",
+    "blur": "blur(4px)",
+    "none": "none"
+};
+
+currentFilter = filterMap[btn.dataset.filter] || "none";
     });
 });
 
