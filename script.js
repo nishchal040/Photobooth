@@ -85,54 +85,39 @@ downloadBtn.addEventListener("click", () => {
 
     const padding = 15;
 
-    // 🔥 Detect mobile
+    // 📱 mobile check
     const isMobile = window.innerWidth < 600;
 
-    // ✅ Smaller image on mobile
-    const width = isMobile ? 220 : 300;
-    const height = isMobile ? 140 : 180;
+    // 🔥 smaller box on mobile
+    const boxWidth = isMobile ? 220 : 300;
+    const boxHeight = isMobile ? 180 : 220;
 
-    canvas.width = width + padding * 2;
-    canvas.height = images.length * (height + padding * 2);
+    canvas.width = boxWidth + padding * 2;
+    canvas.height = images.length * (boxHeight + padding * 2);
 
     let y = 0;
 
     images.forEach((img) => {
-        // Background (UNCHANGED padding)
+        // white background
         ctx.fillStyle = "white";
-        ctx.fillRect(0, y, canvas.width, height + padding * 2);
+        ctx.fillRect(0, y, canvas.width, boxHeight + padding * 2);
 
-        // Crop center (NO distortion)
-        const imgRatio = img.naturalWidth / img.naturalHeight;
-        const targetRatio = width / height;
-
-        let sx, sy, sWidth, sHeight;
-
-        if (imgRatio > targetRatio) {
-            sHeight = img.naturalHeight;
-            sWidth = sHeight * targetRatio;
-            sx = (img.naturalWidth - sWidth) / 2;
-            sy = 0;
-        } else {
-            sWidth = img.naturalWidth;
-            sHeight = sWidth / targetRatio;
-            sx = 0;
-            sy = (img.naturalHeight - sHeight) / 2;
-        }
-
-        ctx.drawImage(
-            img,
-            sx,
-            sy,
-            sWidth,
-            sHeight,
-            padding,
-            y + padding,
-            width,
-            height
+        // 🔥 SCALE (no crop, no distortion)
+        const scale = Math.min(
+            boxWidth / img.naturalWidth,
+            boxHeight / img.naturalHeight
         );
 
-        y += height + padding * 2;
+        const drawWidth = img.naturalWidth * scale;
+        const drawHeight = img.naturalHeight * scale;
+
+        // center image
+        const x = padding + (boxWidth - drawWidth) / 2;
+        const yPos = y + padding + (boxHeight - drawHeight) / 2;
+
+        ctx.drawImage(img, x, yPos, drawWidth, drawHeight);
+
+        y += boxHeight + padding * 2;
     });
 
     const link = document.createElement("a");
