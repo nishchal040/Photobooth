@@ -85,6 +85,7 @@ button:hover {
         padding: 10px;
     }
     .photo{
+        width: 100px;
         object-fit: contain;
     }
 }
