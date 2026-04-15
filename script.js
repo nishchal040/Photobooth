@@ -10,15 +10,11 @@ const maxPhotos = 3;
 
 const rawImageDataURLs = [];
 
-// Fixed output size for every captured photo — same on all devices
-const CAPTURE_W = 400;
-const CAPTURE_H = 300; // 4:3 aspect ratio, consistent everywhere
-
 async function startCamera() {
     try {
         const stream = await navigator.mediaDevices.getUserMedia({
             video: {
-                facingMode: "user",      // front camera on mobile
+                facingMode: "user",
                 width: { ideal: 1280 },
                 height: { ideal: 720 }
             }
@@ -34,35 +30,17 @@ startCamera();
 function capturePhoto() {
     const context = canvas.getContext("2d");
 
-    // Always output at fixed CAPTURE_W x CAPTURE_H regardless of device camera resolution
-    canvas.width = CAPTURE_W;
-    canvas.height = CAPTURE_H;
-
     const vw = camera.videoWidth;
     const vh = camera.videoHeight;
 
-    // Center-crop the video feed to fill CAPTURE_W x CAPTURE_H (no stretching)
-    const targetAspect = CAPTURE_W / CAPTURE_H;
-    const sourceAspect = vw / vh;
-
-    let sx, sy, sw, sh;
-
-    if (sourceAspect > targetAspect) {
-        // Video is wider than target — crop sides
-        sh = vh;
-        sw = Math.round(vh * targetAspect);
-        sx = Math.round((vw - sw) / 2);
-        sy = 0;
-    } else {
-        // Video is taller than target — crop top/bottom
-        sw = vw;
-        sh = Math.round(vw / targetAspect);
-        sx = 0;
-        sy = Math.round((vh - sh) / 2);
-    }
+    // Scale down to max 400px wide while preserving full aspect ratio — no crop, no stretch
+    const maxW = 400;
+    const scale = Math.min(maxW / vw, 1);
+    canvas.width = Math.round(vw * scale);
+    canvas.height = Math.round(vh * scale);
 
     context.filter = "none";
-    context.drawImage(camera, sx, sy, sw, sh, 0, 0, CAPTURE_W, CAPTURE_H);
+    context.drawImage(camera, 0, 0, canvas.width, canvas.height);
 
     return canvas.toDataURL("image/png");
 }
@@ -110,51 +88,53 @@ downloadBtn.addEventListener("click", () => {
         return;
     }
 
-    // All captured images are CAPTURE_W x CAPTURE_H (400x300)
-    // Scale them down for the polaroid strip — same ratio on all devices
-    const photoW = 220;
-    const photoH = Math.round(photoW * (CAPTURE_H / CAPTURE_W)); // keeps 4:3 = 165px
+    // Load first image to get its natural dimensions (already scaled at capture)
+    const firstLoader = new Image();
+    firstLoader.onload = () => {
+        const photoW = firstLoader.naturalWidth;
+        const photoH = firstLoader.naturalHeight;
 
-    const margin = 6;
-    const padTop = 50;
-    const padBottom = 15;
-    const padSide = 15;
+        const margin = 6;
+        const padTop = 50;
+        const padBottom = 15;
+        const padSide = 15;
 
-    const cardW = padSide + photoW + padSide;
-    const totalH = padTop
-        + rawImageDataURLs.length * (photoH + margin * 2)
-        + padBottom;
+        const cardW = padSide + photoW + padSide;
+        const totalH = padTop
+            + rawImageDataURLs.length * (photoH + margin * 2)
+            + padBottom;
 
-    const outputCanvas = document.createElement("canvas");
-    outputCanvas.width = cardW;
-    outputCanvas.height = totalH;
-    const ctx = outputCanvas.getContext("2d");
+        const outputCanvas = document.createElement("canvas");
+        outputCanvas.width = cardW;
+        outputCanvas.height = totalH;
+        const ctx = outputCanvas.getContext("2d");
 
-    // White polaroid card background
-    ctx.fillStyle = "white";
-    ctx.fillRect(0, 0, cardW, totalH);
+        // White polaroid card background
+        ctx.fillStyle = "white";
+        ctx.fillRect(0, 0, cardW, totalH);
 
-    let loadedCount = 0;
+        let loadedCount = 0;
 
-    rawImageDataURLs.forEach((dataURL, index) => {
-        const img = new Image();
-        img.onload = () => {
-            const x = padSide;
-            const y = padTop + index * (photoH + margin * 2) + margin;
+        rawImageDataURLs.forEach((dataURL, index) => {
+            const img = new Image();
+            img.onload = () => {
+                const x = padSide;
+                const y = padTop + index * (photoH + margin * 2) + margin;
 
-            // Bake the selected filter into the downloaded image
-            ctx.filter = (currentFilter && currentFilter !== "none") ? currentFilter : "none";
-            ctx.drawImage(img, x, y, photoW, photoH);
-            ctx.filter = "none";
+                ctx.filter = (currentFilter && currentFilter !== "none") ? currentFilter : "none";
+                ctx.drawImage(img, x, y, photoW, photoH);
+                ctx.filter = "none";
 
-            loadedCount++;
-            if (loadedCount === rawImageDataURLs.length) {
-                const link = document.createElement("a");
-                link.download = "photobooth.png";
-                link.href = outputCanvas.toDataURL("image/png");
-                link.click();
-            }
-        };
-        img.src = dataURL;
-    });
+                loadedCount++;
+                if (loadedCount === rawImageDataURLs.length) {
+                    const link = document.createElement("a");
+                    link.download = "photobooth.png";
+                    link.href = outputCanvas.toDataURL("image/png");
+                    link.click();
+                }
+            };
+            img.src = dataURL;
+        });
+    };
+    firstLoader.src = rawImageDataURLs[0];
 });
