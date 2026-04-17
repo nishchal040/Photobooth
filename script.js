@@ -13,6 +13,12 @@ const rawImageDataURLs = [];
 const CAPTURE_W = 400;
 const CAPTURE_H = 300;
 
+function setCameraSize() {
+    const displayW = camera.offsetWidth || window.innerWidth;
+    camera.style.width = displayW + "px";
+    camera.style.height = Math.round(displayW * (CAPTURE_H / CAPTURE_W)) + "px";
+}
+
 async function startCamera() {
     try {
         const stream = await navigator.mediaDevices.getUserMedia({
@@ -25,17 +31,21 @@ async function startCamera() {
         camera.srcObject = stream;
 
         camera.addEventListener("loadedmetadata", () => {
-            const captureAspect = CAPTURE_W / CAPTURE_H;
-            const displayW = camera.offsetWidth || CAPTURE_W;
-            camera.style.height = Math.round(displayW / captureAspect) + "px";
+            setCameraSize();
         });
 
     } catch (err) {
         console.error("Camera error:", err);
+        alert("Could not access camera. Please allow camera permission.");
     }
 }
 
 startCamera();
+
+window.addEventListener("resize", setCameraSize);
+screen.orientation?.addEventListener("change", () => {
+    setTimeout(setCameraSize, 200);
+});
 
 function capturePhoto() {
     const context = canvas.getContext("2d");
