@@ -29,7 +29,7 @@ body {
 }
 
 video{
-
+    border: 2px solid #D4537E;
     border-radius: 10px;
     width: 400px;
     height: 400px;/* JS will set height based on real camera aspect ratio */
@@ -47,10 +47,6 @@ video{
     
 }
 
-.container img{
-    display: none;
-    width: 50px;
-}
 .btns {
     width: 100%;
     display: flex;
