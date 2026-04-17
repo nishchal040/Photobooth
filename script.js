@@ -24,15 +24,10 @@ async function startCamera() {
         });
         camera.srcObject = stream;
 
-        // Once metadata loads, resize video element to match actual camera aspect ratio
         camera.addEventListener("loadedmetadata", () => {
-            const vw = camera.videoWidth;
-            const vh = camera.videoHeight;
-            const aspect = vw / vh;
-
-            // Keep width fixed at CSS value, adjust height to match real aspect ratio
-            const displayW = camera.offsetWidth || 300;
-            camera.style.height = Math.round(displayW / aspect) + "px";
+            const captureAspect = CAPTURE_W / CAPTURE_H;
+            const displayW = camera.offsetWidth || CAPTURE_W;
+            camera.style.height = Math.round(displayW / captureAspect) + "px";
         });
 
     } catch (err) {

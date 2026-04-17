@@ -21,6 +21,7 @@ video{
     width: 500px;
     height: auto; /* JS will set height based on real camera aspect ratio */
 }
+
 #filters{
     width: 100%;
     display:flex;
@@ -76,6 +77,9 @@ button:hover {
 }
 
 @media screen and (max-width:750px) {
+    .container{
+        flex-direction: column;
+    }
     .container video{
         width: 300px;
         height: auto;
