@@ -122,7 +122,7 @@ downloadBtn.addEventListener("click", () => {
         return;
     }
 
-    const photoW = 220;
+    const photoW = 400;
     const photoH = Math.round(photoW * (CAPTURE_H / CAPTURE_W));
 
     const margin = 6;
