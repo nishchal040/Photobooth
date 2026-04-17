@@ -11,20 +11,26 @@
 </head>
 <body>
     <div class="main">
+        <h1>Photobooth</h1>
     <div id="filters">
         <button data-filter="none">Normal</button>
         <button data-filter="grayscale(1)">B&W</button>
         <button data-filter="sepia(1)">Vintage</button>
         <button data-filter="contrast(1.5)">High Contrast</button>
         <button data-filter="brightness(1.2)">Bright</button>
+        
     </div>
     <div class="container">
+        <img src="flipcamera.png" alt="">
         <div id="photos"></div>
 
          <div class="preview">
             <video id="camera" autoplay playsinline></video>
-            <button id="download">Download</button>
-            <button id="snap">Cheese!</button>
+            <div class="btns">
+                <div class="flip-btn">↺</div>
+                <button id="snap">Cheese!</button>
+                <button id="download">Download</button>
+            </div>
             <canvas id="canvas" style="display:none;"></canvas>
         </div>
     </div>
