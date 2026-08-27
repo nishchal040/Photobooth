@@ -1,40 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="google-site-verification" content="jzF0hNRarNiYU_cQ4i9jl0F8V_RP9Xpi3n844NDCm7E" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Chewy&family=Comic+Relief:wght@400;700&family=Courgette&family=Grand+Hotel&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-    </style>
+    <meta name="description" content="Photobooth Studio - Instant retro photo strip creator with live camera filters, countdown timer, and high-resolution PNG downloads. Free online web photobooth.">
+    <meta name="keywords" content="photobooth, online photobooth, photo strip maker, camera filters, webcam studio, vintage photos, snapshot studio, download photo strip">
+    <meta name="author" content="Photobooth Studio">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#D4537E">
+    <link rel="canonical" href="./">
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Photobooth Studio - Free Retro Photo Strip Maker">
+    <meta property="og:description" content="Capture retro photos, apply aesthetic filters, and download custom 3-photo strips instantly in your browser.">
+    <meta property="og:image" content="assets/logo.svg">
+    <meta property="og:url" content="./">
+    <meta property="og:site_name" content="Photobooth Studio">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Photobooth Studio - Free Retro Photo Strip Maker">
+    <meta name="twitter:description" content="Capture retro photos, apply aesthetic filters, and download custom 3-photo strips instantly in your browser.">
+    <meta name="twitter:image" content="assets/logo.svg">
+
+    <!-- Favicon Suite -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="alternate icon" href="favicon.svg">
+    <link rel="apple-touch-icon" href="favicon.svg">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Outfit:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
-    <title>Photobooth</title>
+    <title>Photobooth Studio - Instant Retro Photo Strip Creator</title>
+
+    <!-- Structured Data (JSON-LD) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Photobooth Studio",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "All Browsers",
+      "description": "Capture retro webcam photos, apply filters, and download high-resolution photo strips directly from your browser.",
+      "browserRequirements": "Requires JavaScript and HTML5 MediaDevices camera access.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
 </head>
 <body>
     <div class="main">
-        <h1>Photobooth</h1>
-    <div id="filters">
-        <button data-filter="none">Normal</button>
-        <button data-filter="grayscale(1)">B&W</button>
-        <button data-filter="sepia(1)">Vintage</button>
-        <button data-filter="contrast(1.5)">High Contrast</button>
-        <button data-filter="brightness(1.2)">Bright</button>
-        
-    </div>
-    <div class="container">
-        <div id="photos"></div>
-
-         <div class="preview">
-            <video id="camera" autoplay playsinline></video>
-            <div class="btns">
-                <div class="flip-btn">↺</div>
-                <button id="snap">Cheese!</button>
-                <button id="download">Download</button>
+        <!-- Main Application Header -->
+        <header class="app-header">
+            <div class="brand-container">
+                <img src="assets/logo.svg" alt="Photobooth Studio Logo" class="brand-logo" width="44" height="44">
+                <div class="title-wrap">
+                    <h1>Photobooth <span class="badge">Studio</span></h1>
+                    <p class="subtitle">Snap 3-photo retro strips with aesthetic filters</p>
+                </div>
             </div>
-            <canvas id="canvas" style="display:none;"></canvas>
-        </div>
+        </header>
+
+        <main class="app-content">
+            <section class="studio-section" aria-label="Photo Booth Camera Studio">
+                <!-- Filter Bar Navigation -->
+                <nav id="filters" aria-label="Photo Filter Selection">
+                    <span class="filter-label">Filters:</span>
+                    <button class="filter-btn active" data-filter="none" aria-label="Normal Filter">Normal</button>
+                    <button class="filter-btn" data-filter="grayscale(1)" aria-label="Black and White Filter">B&W</button>
+                    <button class="filter-btn" data-filter="sepia(1) contrast(1.1)" aria-label="Vintage Sepia Filter">Vintage</button>
+                    <button class="filter-btn" data-filter="contrast(1.4) brightness(1.1)" aria-label="High Contrast Filter">Contrast</button>
+                    <button class="filter-btn" data-filter="brightness(1.25) saturate(1.2)" aria-label="Bright Glow Filter">Bright</button>
+                    <button class="filter-btn" data-filter="hue-rotate(90deg)" aria-label="Cyberpop Filter">Cyberpop</button>
+                    <button class="filter-btn" data-filter="saturate(2) contrast(1.2)" aria-label="Vivid Warm Filter">Vivid</button>
+                </nav>
+
+                <!-- Main Studio Workspace Container -->
+                <div class="container">
+                    <!-- Photostrip Output Side -->
+                    <aside class="photostrip-wrapper" aria-label="Captured Photo Strip">
+                        <div class="photostrip-header">
+                            <span class="strip-brand">📷 PHOTOBOOTH</span>
+                            <span id="photo-count-badge" class="strip-count">0/3</span>
+                        </div>
+                        <div id="photos" class="photostrip-frame">
+                            <div class="empty-placeholder">
+                                <span>Press "Cheese!" to take your 1st photo</span>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <!-- Camera Viewfinder Side -->
+                    <article class="preview-card" aria-label="Camera Viewfinder">
+                        <div class="video-wrapper">
+                            <video id="camera" autoplay playsinline title="Live Camera Feed"></video>
+
+                            <!-- Visual Overlay Elements -->
+                            <div id="flash-overlay" class="flash-effect" aria-hidden="true"></div>
+                            <div id="countdown-overlay" class="countdown-overlay hidden" aria-live="assertive">3</div>
+
+                            <!-- Camera Mirror Indicator / Error Box -->
+                            <div id="camera-status" class="camera-status hidden">
+                                <p id="camera-error-msg">Camera permissions required</p>
+                                <button id="retry-camera-btn" class="btn-mini">Retry Camera</button>
+                            </div>
+                        </div>
+
+                        <!-- Action Control Buttons Toolbar -->
+                        <div class="btns-toolbar">
+                            <button id="flip-btn" class="flip-btn" aria-label="Flip Camera or Mirror Toggle" title="Flip Camera / Mirror">↺</button>
+                            <button id="timer-toggle" class="btn-secondary" aria-label="Toggle 3-second countdown timer" title="Toggle 3s Timer">⏱️ <span id="timer-label">Off</span></button>
+                            <button id="snap" class="btn-snap" aria-label="Capture Photo">Cheese!</button>
+                            <button id="reset-btn" class="btn-secondary" aria-label="Clear and Retake Photos" title="Reset Photos">🔄 Retake</button>
+                            <button id="download" class="btn-download" aria-label="Download Photo Strip PNG">💾 Download</button>
+                        </div>
+                        <canvas id="canvas" style="display:none;"></canvas>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer Section -->
+        <footer class="app-footer">
+            <p>Photobooth Studio — Privacy-first browser application. Photos remain 100% local on your device.</p>
+        </footer>
     </div>
-    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

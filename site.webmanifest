@@ -1,0 +1,16 @@
+{
+  "name": "Photobooth - Free Online Photo Strip Studio",
+  "short_name": "Photobooth",
+  "description": "Capture retro photos, apply filters, and download custom photostrips online.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFF0F5",
+  "theme_color": "#D4537E",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
