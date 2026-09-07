@@ -1,0 +1,19 @@
+{
+  "name": "photobooth-studio",
+  "version": "1.0.0",
+  "description": "Free Online Retro Photo Strip Maker with Programmatic SEO Engine",
+  "main": "script.js",
+  "scripts": {
+    "build:seo": "node scripts/generate-seo.js",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "photobooth",
+    "photo strip maker",
+    "webcam photobooth",
+    "programmatic seo",
+    "retro photos"
+  ],
+  "author": "Photobooth Studio",
+  "license": "MIT"
+}

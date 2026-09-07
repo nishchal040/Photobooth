@@ -34,6 +34,16 @@ let audioCtx = null;
 const CAPTURE_W = 600;
 const CAPTURE_H = 450;
 
+// Programmatic SEO Configuration Hydration
+const config = window.PHOTOBOOTH_CONFIG || {};
+const urlParams = new URLSearchParams(window.location.search);
+const initialFilter = urlParams.get("filter") || config.defaultFilter || "none";
+const stripStampText = urlParams.get("stamp") || config.stripStamp || "PHOTOBOOTH STUDIO";
+
+if (config.themeColor) {
+    document.documentElement.style.setProperty("--primary-color", config.themeColor);
+}
+
 /**
  * Initialize / Start Webcam Feed
  */
@@ -312,10 +322,11 @@ downloadBtn.addEventListener("click", () => {
     ctx.fillRect(0, 0, stripW, totalH);
 
     // Header branding
-    ctx.fillStyle = "#D4537E";
-    ctx.font = "bold 28px 'Chewy', cursive, sans-serif";
+    const themeBrandColor = config.themeColor || "#D4537E";
+    ctx.fillStyle = themeBrandColor;
+    ctx.font = "bold 26px 'Chewy', cursive, sans-serif";
     ctx.textAlign = "center";
-    ctx.fillText("📷 PHOTOBOOTH STUDIO", stripW / 2, 50);
+    ctx.fillText(`📷 ${stripStampText}`, stripW / 2, 50);
 
     // Date stamp
     ctx.fillStyle = "#A0AEC0";
@@ -350,7 +361,8 @@ downloadBtn.addEventListener("click", () => {
 
                 // Download link trigger
                 const link = document.createElement("a");
-                link.download = `photobooth-strip-${Date.now()}.png`;
+                const safeSlug = (config.slug || "photobooth").replace(/[^a-z0-9]/gi, "-").toLowerCase();
+                link.download = `${safeSlug}-strip-${Date.now()}.png`;
                 link.href = exportCanvas.toDataURL("image/png");
                 link.click();
             }
@@ -359,5 +371,56 @@ downloadBtn.addEventListener("click", () => {
     });
 });
 
+/**
+ * Initialize Preset Filters & UI Configuration
+ */
+function initializeConfigPreset() {
+    // Update strip brand text label if present in DOM
+    const stripBrandEl = document.querySelector(".strip-brand");
+    if (stripBrandEl && stripStampText) {
+        stripBrandEl.textContent = `📷 ${stripStampText}`;
+    }
+
+    // Apply preset filter if specified
+    if (initialFilter && initialFilter !== "none") {
+        currentFilter = initialFilter;
+        camera.style.filter = currentFilter;
+
+        // Update active button
+        let matched = false;
+        filterButtons.forEach(btn => {
+            if (btn.dataset.filter === initialFilter) {
+                filterButtons.forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+                matched = true;
+            }
+        });
+
+        if (!matched && initialFilter) {
+            // If custom filter string, keep camera filtered
+            camera.style.filter = initialFilter;
+        }
+    }
+
+    // Interactive FAQ Accordion setup
+    const faqQuestions = document.querySelectorAll(".faq-item-question");
+    faqQuestions.forEach(q => {
+        q.addEventListener("click", () => {
+            const parent = q.closest(".faq-item");
+            if (parent) {
+                const isOpen = parent.classList.contains("active");
+                document.querySelectorAll(".faq-item").forEach(item => item.classList.remove("active"));
+                if (!isOpen) {
+                    parent.classList.add("active");
+                }
+            }
+        });
+    });
+}
+
+// Run configuration initialization
+initializeConfigPreset();
+
 // Initialize Camera on Load
 startCamera();
+

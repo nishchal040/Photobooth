@@ -1,0 +1,6 @@
+# Photobooth Studio Robots.txt
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://photobooth.app/sitemap.xml
