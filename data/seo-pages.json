@@ -1,0 +1,803 @@
+{
+  "siteMetadata": {
+    "siteName": "Photobooth Studio",
+    "siteUrl": "https://photobooth.app",
+    "defaultThemeColor": "#D4537E",
+    "author": "Photobooth Studio"
+  },
+  "categories": [
+    { "id": "occasions", "name": "Event & Occasions", "description": "Celebrate special moments with custom themed photo strips" },
+    { "id": "aesthetics", "name": "Aesthetics & Filters", "description": "Capture vintage, retro, Korean 4-cut, and Y2K looks" },
+    { "id": "tools", "name": "Tools & Formats", "description": "Free web-based photo booth tools with instant high-res downloads" }
+  ],
+  "pages": [
+    {
+      "slug": "wedding-photobooth",
+      "category": "occasions",
+      "categoryName": "Event & Occasions",
+      "metaTitle": "Online Wedding Photo Booth - Free Guest Photo Strip Maker",
+      "metaDescription": "Create romantic wedding photo strips instantly in your browser. Free virtual wedding photo booth with live webcam filters and high-res printable downloads.",
+      "keywords": "wedding photo booth, online wedding photobooth, virtual wedding booth, wedding photo strip maker, DIY wedding photo booth, romantic photo filters",
+      "h1": "Online Wedding Photo Booth",
+      "badge": "Wedding Edition",
+      "subtitle": "Capture romantic guest moments with printable 3-photo wedding strips",
+      "defaultFilter": "brightness(1.25) saturate(1.2)",
+      "filterBtnData": "brightness(1.25) saturate(1.2)",
+      "stripStamp": "WEDDING MEMORIES",
+      "themeColor": "#D4537E",
+      "intro": "Photobooth Studio’s Online Wedding Photo Booth lets you and your guests capture timeless, romantic wedding photos right from any smartphone, laptop, or tablet. No expensive booth rental or physical equipment required—just snap, filter, and download a gorgeous commemorative 3-photo strip.",
+      "features": [
+        { "title": "Guest-Friendly Web Access", "description": "No apps to install. Guests simply open the link on their phones or wedding tablet station to snap photos." },
+        { "title": "Romantic Glow Preset", "description": "Pre-tuned warm, glowing filter that softens highlights and enhances natural skin tones for wedding portraits." },
+        { "title": "Instant Keepsake Download", "description": "Download 300 DPI ready-to-print photo strips stamped with your custom wedding date and celebration badge." },
+        { "title": "Privacy First", "description": "All captures are processed 100% locally on device. No personal photos are ever sent to remote servers." }
+      ],
+      "howTo": [
+        { "step": 1, "title": "Set up your Wedding Station", "text": "Place an iPad or laptop with good natural lighting or soft ring lights at your reception booth corner." },
+        { "step": 2, "title": "Strike a Romantic or Fun Pose", "text": "Grab props, hit 'Cheese!', and let the countdown timer snap 3 continuous poses." },
+        { "step": 3, "title": "Download and Share", "text": "Save the printable photo strip instantly to your camera roll or print it directly for the guestbook." }
+      ],
+      "eventTips": [
+        "Include a QR code on wedding dinner tables that links guests directly to this virtual photo booth.",
+        "Provide fun props like oversized sunglasses, floral headbands, and wooden chalk signs with the couple's wedding hashtag.",
+        "Set up a small portable photo printer next to your tablet for an authentic physical wedding favor station."
+      ],
+      "faqs": [
+        {
+          "question": "Can I use this online wedding photo booth on mobile phones?",
+          "answer": "Yes! Photobooth Studio is fully responsive and works smoothly across all iOS (iPhone/iPad Safari) and Android (Chrome) mobile browsers with front and back camera support."
+        },
+        {
+          "question": "Is this wedding photo booth completely free to use?",
+          "answer": "Yes, it is 100% free with unlimited photo captures, live filters, and high-resolution PNG strip downloads without watermarks or paywalls."
+        },
+        {
+          "question": "How can I set up a DIY photo booth at my wedding reception?",
+          "answer": "All you need is a tablet or laptop positioned on a stand with a simple backdrop (like fairy lights, flowers, or a sequin curtain). Open this page in fullscreen mode for guests to tap and capture."
+        }
+      ]
+    },
+    {
+      "slug": "birthday-photobooth",
+      "category": "occasions",
+      "categoryName": "Event & Occasions",
+      "metaTitle": "Online Birthday Photo Booth - Fun Birthday Photo Strip Maker",
+      "metaDescription": "Snap vibrant birthday photo strips online with friends. Free webcam birthday photo booth with countdown timer, colorful filters, and instant PNG downloads.",
+      "keywords": "birthday photo booth, online birthday photobooth, birthday party photo strip, virtual birthday photo booth, birthday webcam studio, birthday memories strip",
+      "h1": "Online Birthday Photo Booth",
+      "badge": "Birthday Party",
+      "subtitle": "Turn your birthday celebration into unforgettable photo strips in seconds",
+      "defaultFilter": "saturate(2) contrast(1.2)",
+      "filterBtnData": "saturate(2) contrast(1.2)",
+      "stripStamp": "BIRTHDAY VIBES",
+      "themeColor": "#FF537C",
+      "intro": "Make your birthday bash unforgettable! Whether you're hosting an in-person birthday party, a sweet sixteen, or celebrating virtually with distant friends, Photobooth Studio delivers vibrant party photo strips packed with energy and color.",
+      "features": [
+        { "title": "Vivid Party Colors", "description": "High-saturation filters that make party balloons, confetti, and celebratory outfits pop with energy." },
+        { "title": "Group Selfie Ready", "description": "Wide-angle camera support with 3-second timer gives everyone time to squeeze into the frame." },
+        { "title": "Digital Party Favor", "description": "Guests can instantly download their 3-cut birthday strip directly to their phones to post on Instagram Stories and TikTok." },
+        { "title": "100% Free & Unlimited", "description": "Take as many retakes and photo strips as you want without any restrictions or credits." }
+      ],
+      "howTo": [
+        { "step": 1, "title": "Gather the Party Squad", "text": "Position your webcam or smartphone facing your party backdrop and gather your friends." },
+        { "step": 2, "title": "Enable the 3-Second Timer", "text": "Turn on the timer so everyone has time to change poses between the 3 snapshot flashes." },
+        { "step": 3, "title": "Download Party Strips", "text": "Save the finished 3-photo collage and text or AirDrop it to all your guests instantly." }
+      ],
+      "eventTips": [
+        "Create a sparkly foil fringe backdrop and provide party hats, funky glasses, and inflatable props.",
+        "Add your birthday hashtag to your room decor so friends tag you when posting their digital strips on social media.",
+        "Have the birthday host take a commemorative photo strip with each group of guests."
+      ],
+      "faqs": [
+        {
+          "question": "Can multiple guests use this photobooth at the party?",
+          "answer": "Yes! Guests can use it on a shared party tablet or open the website on their own individual phones simultaneously."
+        },
+        {
+          "question": "Does the birthday photo booth work offline or with slow Wi-Fi?",
+          "answer": "Once the page is loaded in your browser, all camera operations and photo generation happen entirely inside your browser without consuming streaming bandwidth."
+        }
+      ]
+    },
+    {
+      "slug": "vintage-photobooth",
+      "category": "aesthetics",
+      "categoryName": "Aesthetics & Filters",
+      "metaTitle": "Vintage Photo Booth Online - Retro Sepia Photo Strip Maker",
+      "metaDescription": "Create authentic vintage photo strips online. Authentic sepia tones, film grain warmth, and classic arcade photobooth aesthetics with instant download.",
+      "keywords": "vintage photo booth, retro photobooth online, sepia photo strip maker, vintage webcam photobooth, old school photo booth, aesthetic film strip",
+      "h1": "Vintage Photo Booth Online",
+      "badge": "Retro Classic",
+      "subtitle": "Step back in time with nostalgic sepia tones and authentic vintage photostrips",
+      "defaultFilter": "sepia(1) contrast(1.1)",
+      "filterBtnData": "sepia(1) contrast(1.1)",
+      "stripStamp": "VINTAGE PHOTOBOOTH",
+      "themeColor": "#B7791F",
+      "intro": "Rediscover the timeless magic of classic 1970s and 1980s boardwalk photobooths. Our Vintage Photo Booth simulator transforms your webcam stream with rich sepia hues, cinematic contrast, and authentic multi-frame photo strip styling.",
+      "features": [
+        { "title": "Authentic Sepia Chemistry", "description": "Carefully balanced sepia and tonal contrast curves replicate analog silver-gelatin photographic prints." },
+        { "title": "Classic 3-Frame Layout", "description": "Iconic vertical strip layout styled after traditional analog coin-operated booths." },
+        { "title": "Retro Shutter Sound FX", "description": "Synthesized mechanical shutter audio and optical flash effect for total analog immersion." },
+        { "title": "High-Res Canvas Export", "description": "Download crisp, high-resolution PNG files suitable for archival scrapbooking or social feeds." }
+      ],
+      "howTo": [
+        { "step": 1, "title": "Select the Vintage Preset", "text": "The vintage sepia filter activates automatically to bathe your feed in nostalgic amber tones." },
+        { "step": 2, "title": "Strike Classic Vintage Poses", "text": "Channel vintage glamour, goofy arcade faces, or moody portrait expressions across 3 snapshots." },
+        { "step": 3, "title": "Export Your Vintage Strip", "text": "Click download to generate a retro photo strip complete with custom date stamping." }
+      ],
+      "eventTips": [
+        "Wear vintage denim, leather jackets, or muted earth tones for the most authentic retro look.",
+        "Print out downloaded strips on textured matte photo paper to replicate genuine 20th-century photo booth prints.",
+        "Frame your photo strip in a mini magnetic locker frame or clip it to your retro moodboard."
+      ],
+      "faqs": [
+        {
+          "question": "How does this vintage photobooth achieve its retro aesthetic?",
+          "answer": "We combine hardware-accelerated CSS color matrix transformations (sepia toning, contrast boosting, and highlight rolloff) with our high-resolution vertical canvas strip renderer."
+        },
+        {
+          "question": "Can I switch between vintage sepia and black & white?",
+          "answer": "Yes! You can toggle between Vintage, B&W, Contrast, and Cyberpop filters at any time with a single click."
+        }
+      ]
+    },
+    {
+      "slug": "black-and-white-photobooth",
+      "category": "aesthetics",
+      "categoryName": "Aesthetics & Filters",
+      "metaTitle": "Black and White Photo Booth Online - Monochrome Photo Strip",
+      "metaDescription": "Generate high-contrast black and white photo strips online. Free monochrome photo booth with live webcam filter, countdown timer, and studio-grade export.",
+      "keywords": "black and white photo booth, monochrome photo strip maker, b&w photobooth online, noir photo strip, minimalist photo booth, grayscale webcam studio",
+      "h1": "Black & White Photo Booth",
+      "badge": "Monochrome Studio",
+      "subtitle": "Classic, high-contrast monochrome photo strips with timeless studio elegance",
+      "defaultFilter": "grayscale(1)",
+      "filterBtnData": "grayscale(1)",
+      "stripStamp": "MONOCHROME STUDIO",
+      "themeColor": "#2D3748",
+      "intro": "Nothing surpasses the timeless elegance of black and white photography. Our Black & White Photo Booth converts your webcam feed into crisp, striking monochrome photo strips that emphasize lighting, emotion, and geometric expression.",
+      "features": [
+        { "title": "Deep Black & Crisp White", "description": "Tuned dynamic range that produces rich shadows, crisp midtones, and clean bright highlights." },
+        { "title": "Editorial Portrait Feel", "description": "Gives everyday webcam selfies a high-fashion, editorial magazine aesthetic." },
+        { "title": "Minimalist Card Frame", "description": "Crisp border layout with minimalist typography that lets the monochrome portraits shine." },
+        { "title": "Zero Lag Capture", "description": "Real-time canvas drawing with zero shutter latency on any modern browser." }
+      ],
+      "howTo": [
+        { "step": 1, "title": "Position Lighting", "text": "For best dramatic B&W results, position a single key light to one side of your face for moody chiaroscuro contrast." },
+        { "step": 2, "title": "Snap 3 Expressive Frames", "text": "Hit the 'Cheese!' button or use the 3-second timer to capture three complementary angles." },
+        { "step": 3, "title": "Save High-Res PNG", "text": "Download your finished studio strip with a single click to share on Pinterest, Instagram, or VSCO." }
+      ],
+      "eventTips": [
+        "Monochrome strips look stunning when printed and framed as a minimalist art gallery wall.",
+        "Experiment with dramatic facial expressions, hand gestures, and side profiles.",
+        "Wear solid black, white, or striped patterns to maximize visual graphic contrast."
+      ],
+      "faqs": [
+        {
+          "question": "Why use a black and white photo booth instead of color?",
+          "answer": "Black and white strips remove color distractions, drawing focus to eyes, emotions, and timeless vintage compositions."
+        }
+      ]
+    },
+    {
+      "slug": "korean-photobooth",
+      "category": "aesthetics",
+      "categoryName": "Aesthetics & Filters",
+      "metaTitle": "Korean Photo Booth Online - Insaeng Negeot 4-Cut Style Maker",
+      "metaDescription": "Create Korean-style photo strips online (Life4Cuts / Insaeng Negeot aesthetic). Cute filters, smooth skin tones, and aesthetic photo strip maker for free.",
+      "keywords": "korean photobooth, insaeng negeot online, life4cuts online, korean 4 cut photo booth, cute photo strip maker, haru film online, k-pop photobooth",
+      "h1": "Korean Style Photo Booth",
+      "badge": "Life4Cuts Aesthetic",
+      "subtitle": "Create trendy Korean Insaeng Negeot style photo strips with cute aesthetic filters",
+      "defaultFilter": "brightness(1.25) saturate(1.2)",
+      "filterBtnData": "brightness(1.25) saturate(1.2)",
+      "stripStamp": "인생네컷 • LIFE CUTS",
+      "themeColor": "#ED64A6",
+      "intro": "Love the famous Hongdae and Seoul self-photo studios like Life4Cuts (인생네컷) and Haru Film? Our Korean Style Photo Booth brings that exact cute, brightening aesthetic and iconic vertical strip format directly to your browser for free!",
+      "features": [
+        { "title": "K-Beauty Soft Glow", "description": "Skin-brightening filter preset calibrated to deliver smooth complexion tones and vibrant eye clarity." },
+        { "title": "Iconic Aesthetic Frame", "description": "Pastel framing with Korean typography branding stamp reminiscent of Seoul street photo booths." },
+        { "title": "Cute Posing Sequence", "description": "Timed shutter sequence designed for popular Korean photobooth poses: finger hearts, cheek pokes, and peace signs." },
+        { "title": "Direct Mobile Download", "description": "Instantly download your finished strip in perfect mobile wallpaper and photocard dimensions." }
+      ],
+      "howTo": [
+        { "step": 1, "title": "Pick your K-Style Poses", "text": "Prepare your best 3 signature poses: finger heart, cat ears / cheek poke, and a bright smile." },
+        { "step": 2, "title": "Snap with Bright Glow", "text": "Enjoy the skin-smoothing glow filter as our photobooth snaps 3 consecutive shots." },
+        { "step": 3, "title": "Save & Decorate", "text": "Download the digital photo strip ready to be decorated with cute stickers or printed for your phone case." }
+      ],
+      "eventTips": [
+        "Cut out the printed strip and place it behind a clear phone case for the ultimate Korean photocard look.",
+        "Wear cute animal ear headbands or oversized glasses just like real Seoul photo studios.",
+        "Take couple photo strips with matching pastel outfits for cute aesthetic memories."
+      ],
+      "faqs": [
+        {
+          "question": "What makes Korean photo booths (Insaeng Negeot) so popular?",
+          "answer": "Korean photo booths emphasize flattering brightening lighting, clean vertical multi-cut layouts, and fun expressive posing culture that turn casual hangouts into aesthetic keepsakes."
+        },
+        {
+          "question": "Can I print this out to fit in my phone case or wallet?",
+          "answer": "Yes! The downloaded PNG strip is sized in a high-resolution vertical ratio perfectly suited for wallet prints, phone cases, and scrapbooks."
+        }
+      ]
+    },
+    {
+      "slug": "graduation-photobooth",
+      "category": "occasions",
+      "categoryName": "Event & Occasions",
+      "metaTitle": "Online Graduation Photo Booth - Class Celebration Strip Maker",
+      "metaDescription": "Celebrate graduation with custom photo strips. Free online graduation photo booth for high school, college, and university commencement parties.",
+      "keywords": "graduation photo booth, graduation photo strip maker, online commencement photobooth, graduation party photo booth, class of 2026 photo booth",
+      "h1": "Online Graduation Photo Booth",
+      "badge": "Class of 2026",
+      "subtitle": "Commemorate your academic milestone with printable graduation photo strips",
+      "defaultFilter": "contrast(1.4) brightness(1.1)",
+      "filterBtnData": "contrast(1.4) brightness(1.1)",
+      "stripStamp": "GRADUATION CELEBRATION",
+      "themeColor": "#3182CE",
+      "intro": "Cap and gown on, diploma in hand! Celebrate years of hard work with our Online Graduation Photo Booth. Capture proud smiles, celebratory cap tosses, and fun moments with classmates and family.",
+      "features": [
+        { "title": "Commencement Keepsake", "description": "Commemorate your graduation day with high-resolution photo strips stamped with celebratory branding." },
+        { "title": "Perfect for Cap & Gown", "description": "High-contrast color filter ensures black graduation robes and colorful honor cords look crisp and vibrant." },
+        { "title": "Family & Friend Groups", "description": "3-second countdown timer makes it easy to gather professors, parents, and friends into group photos." },
+        { "title": "Free Digital Keepsakes", "description": "Share digital strips instantly across LinkedIn, Instagram, and family group chats." }
+      ],
+      "howTo": [
+        { "step": 1, "title": "Suit Up in Regalia", "text": "Put on your cap, gown, and tassel, and set your webcam at eye level." },
+        { "step": 2, "title": "Capture the Milestone", "text": "Pose with your diploma cover, throw your cap, or celebrate with friends across 3 snapshots." },
+        { "step": 3, "title": "Print for Family Albums", "text": "Download the strip and print copies for grandma, parents, and graduation announcement cards." }
+      ],
+      "eventTips": [
+        "Include miniature chalkboard signs where graduates can write their future career goals or alma mater.",
+        "Set up a dedicated graduation photo booth kiosk at your backyard commencement BBQ.",
+        "Take a candid sequence: 1) Serious scholar pose, 2) Joyful diploma flash, 3) Cap toss excitement."
+      ],
+      "faqs": [
+        {
+          "question": "Can we use this for virtual graduation ceremonies?",
+          "answer": "Absolutely! Remote graduates and family members from anywhere in the world can open the link in their browser and take graduation photo strips from home."
+        }
+      ]
+    },
+    {
+      "slug": "baby-shower-photobooth",
+      "category": "occasions",
+      "categoryName": "Event & Occasions",
+      "metaTitle": "Online Baby Shower Photo Booth - Sweet Celebration Photo Strips",
+      "metaDescription": "Create adorable baby shower photo strips online. Free virtual baby shower photo booth with pastel filters, group selfies, and instant printable downloads.",
+      "keywords": "baby shower photo booth, online baby shower photobooth, gender reveal photo strip, baby celebration photobooth, sweet baby photo strip maker",
+      "h1": "Baby Shower Photo Booth Online",
+      "badge": "Baby Celebration",
+      "subtitle": "Capture sweet baby shower and gender reveal memories with custom photo strips",
+      "defaultFilter": "brightness(1.25) saturate(1.2)",
+      "filterBtnData": "brightness(1.25) saturate(1.2)",
+      "stripStamp": "SWEET BABY CELEBRATION",
+      "themeColor": "#F687B3",
+      "intro": "Celebrate the upcoming arrival of your little one with a delightful online baby shower photo booth. Perfect for in-person nursery showers, drive-by celebrations, and virtual gender reveal parties with friends and family worldwide.",
+      "features": [
+        { "title": "Soft Pastel Aesthetics", "description": "Warm, luminous filter preset that complements pastel balloons, nursery themes, and floral decor." },
+        { "title": "Virtual Shower Compatible", "description": "Let remote aunts, grandparents, and friends snap keepsakes even if they can't attend in person." },
+        { "title": "Scrapbook Ready", "description": "Download 3-photo strips sized perfectly for baby memory books and guest memory boards." },
+        { "title": "Zero Ads & 100% Private", "description": "Safe, private, and local browser execution ensures family photos stay in your control." }
+      ],
+      "howTo": [
+        { "step": 1, "title": "Decorate your Photo Nook", "text": "Set up near a balloon garland, teddy bear display, or floral arch." },
+        { "step": 2, "title": "Snap Loving Poses", "text": "Cradle the baby bump, hold baby booties or ultrasound photos, and smile with guests." },
+        { "step": 3, "title": "Add to Baby Guestbook", "text": "Save and print the strips to paste alongside handwritten advice notes in the baby guestbook." }
+      ],
+      "eventTips": [
+        "Provide prop signs reading 'Team Boy', 'Team Girl', 'Future Mom', and 'Proud Grandma'.",
+        "Place a tablet running this photobooth next to the onesie decorating table.",
+        "Export digital strips into a shared digital album for the baby's first-year keepsake archive."
+      ],
+      "faqs": [
+        {
+          "question": "Can guests write messages on the photo strips?",
+          "answer": "Once printed on cardstock or photo paper, the white borders around and below the photos offer ideal space for guests to write heartfelt handwritten notes to the baby."
+        }
+      ]
+    },
+    {
+      "slug": "bachelorette-photobooth",
+      "category": "occasions",
+      "categoryName": "Event & Occasions",
+      "metaTitle": "Online Bachelorette Party Photo Booth - Hen Party Strip Maker",
+      "metaDescription": "Snap wild, glamorous bachelorette party photo strips online. Free hen party webcam photo booth with neon & vivid filters and instant download.",
+      "keywords": "bachelorette photo booth, hen party photo strip maker, bachelorette party webcam, bridal party photo booth, girls night photo strip",
+      "h1": "Bachelorette Photo Booth Online",
+      "badge": "Bride Tribe",
+      "subtitle": "Celebrate the bride-to-be with unforgettable, high-energy photo strips",
+      "defaultFilter": "saturate(2) contrast(1.2)",
+      "filterBtnData": "saturate(2) contrast(1.2)",
+      "stripStamp": "BRIDE TRIBE CELEBRATION",
+      "themeColor": "#D53F8C",
+      "intro": "Get the party started for the bride-to-be! Whether you're celebrating in Vegas, lounging by a beach house pool, or throwing a cozy slumber party, our Bachelorette Photo Booth lets the entire bride tribe create glamorous, fun photo strips in seconds.",
+      "features": [
+        { "title": "Vivid Glam Filter", "description": "Enhances makeup, champagne flutes, glitter, and party attire with rich vibrant colors." },
+        { "title": "Selfie Station for Hotel or AirBnB", "description": "Prop up a tablet in your rental living room for an instant 24/7 party photobooth." },
+        { "title": "Group Poses with Timer", "description": "Hands-free countdown timer lets the whole squad strike 3 fierce poses together." },
+        { "title": "Social Ready", "description": "Download PNG strips formatted for instant sharing on Instagram and group chats." }
+      ],
+      "howTo": [
+        { "step": 1, "title": "Pop the Bubbly & Grab Props", "text": "Put on your 'Bride' and 'Bridesmaid' sashes, sunglasses, and tiaras." },
+        { "step": 2, "title": "Snap 3 Wild Shots", "text": "Use the 3-second timer to strike goofy, fierce, and celebratory poses with the bride." },
+        { "step": 3, "title": "Share the Memories", "text": "AirDrop the downloaded strips to the group chat so everyone has instant party keepsakes." }
+      ],
+      "eventTips": [
+        "Include a pink or rose gold shimmer curtain with customized bride balloon letters.",
+        "Take a dedicated strip with each bridesmaid so the bride has an individual memory with everyone.",
+        "Print physical copies to paste into a surprise scrapbook presented to the bride on wedding morning."
+      ],
+      "faqs": [
+        {
+          "question": "Can we take vertical and horizontal group photos?",
+          "answer": "Yes, you can rotate your mobile device or position your laptop webcam to capture wide group shots of the entire bridal squad."
+        }
+      ]
+    },
+    {
+      "slug": "valentines-photobooth",
+      "category": "occasions",
+      "categoryName": "Event & Occasions",
+      "metaTitle": "Valentine's Day Photo Booth Online - Couple Photo Strip Maker",
+      "metaDescription": "Create cute Valentine's Day photo strips with your partner. Free romantic photo booth online with aesthetic filters, countdown timer, and high-res download.",
+      "keywords": "valentines photo booth, couple photo strip maker, romantic photo booth online, valentines day webcam, cute couple photo strip, love photobooth",
+      "h1": "Valentine’s Day Photo Booth",
+      "badge": "Love & Romance",
+      "subtitle": "Capture sweet romantic moments with your favorite person in a classic photo strip",
+      "defaultFilter": "brightness(1.25) saturate(1.2)",
+      "filterBtnData": "brightness(1.25) saturate(1.2)",
+      "stripStamp": "VALENTINE MEMORIES ♥",
+      "themeColor": "#E53E3E",
+      "intro": "Celebrate date night, an anniversary, or Valentine's Day with our intimate couple photo booth. Snap three romantic or goofy poses, apply a warm glow filter, and download a cute digital strip you can cherish forever.",
+      "features": [
+        { "title": "Romantic Glow & Warmth", "description": "Softens lighting to create cozy, flattering portrait tones for couple selfies." },
+        { "title": "Heart-Stamped Layout", "description": "Custom Valentine-themed header stamp that makes your strip a thoughtful digital gift." },
+        { "title": "Long-Distance Date Night", "description": "Take matching strips over FaceTime or Zoom date nights from anywhere in the world." },
+        { "title": "Print for Wallets & Lockers", "description": "High-res output prints sharply on 4x6 photo paper to slip into wallets and card gifts." }
+      ],
+      "howTo": [
+        { "step": 1, "title": "Cuddle Up in Front of the Camera", "text": "Set your camera at eye level and find cozy, warm lighting." },
+        { "step": 2, "title": "Capture 3 Sweet Moments", "text": "Try a cute kiss on the cheek, a goofy wink, and a cozy warm smile." },
+        { "step": 3, "title": "Send as a Digital Valentine", "text": "Save the finished strip and send it with a heartfelt love message." }
+      ],
+      "eventTips": [
+        "Include little paper hearts or chocolates as props.",
+        "Print the strip and attach it to a bouquet of flowers or a box of chocolates.",
+        "Set the photo strip as your lock screen wallpaper to keep the memory close."
+      ],
+      "faqs": [
+        {
+          "question": "Can I use this for long-distance relationships?",
+          "answer": "Yes! Both partners can open the website from their respective devices, take matching strips, and combine or share them to celebrate long-distance Valentine dates."
+        }
+      ]
+    },
+    {
+      "slug": "halloween-photobooth",
+      "category": "occasions",
+      "categoryName": "Event & Occasions",
+      "metaTitle": "Halloween Photo Booth Online - Spooky Costume Photo Strip Maker",
+      "metaDescription": "Show off your Halloween costume with spooky photo strips. Free Halloween webcam photo booth with cyberpop and dark contrast filters, instant download.",
+      "keywords": "halloween photo booth, spooky photo strip maker, costume photo booth online, halloween webcam studio, horror photo filters, haunted photo booth",
+      "h1": "Halloween Photo Booth Online",
+      "badge": "Spooky Season",
+      "subtitle": "Show off your Halloween costumes with haunting filters and spooky photo strips",
+      "defaultFilter": "hue-rotate(90deg)",
+      "filterBtnData": "hue-rotate(90deg)",
+      "stripStamp": "SPOOKY PHOTOBOOTH 🎃",
+      "themeColor": "#DD6B20",
+      "intro": "Show off your creative Halloween costumes in style! Our Halloween Photo Booth delivers eerie color shifts, high-contrast shadows, and spooky aesthetic filters to turn your costume party into an unforgettable photo experience.",
+      "features": [
+        { "title": "Cyberpop & Eerie FX", "description": "Spectral green, purple, and high-contrast color shifts perfect for witches, vampires, and monsters." },
+        { "title": "Costume Showcase", "description": "Three vertical frames capture full costume details, funny monster faces, and spooky poses." },
+        { "title": "Party Ready", "description": "Set it up as a haunted house photo kiosk for trick-or-treaters and party guests." },
+        { "title": "Instant Spooky PNGs", "description": "Download crisp 300 DPI strips ready for Instagram, Reddit, and costume contest voting." }
+      ],
+      "howTo": [
+        { "step": 1, "title": "Put on your Costume & Makeup", "text": "Dim the room lights and use colorful LED or blacklight bulbs for extra spookiness." },
+        { "step": 2, "title": "Choose your Haunted Filter", "text": "Select the Cyberpop or B&W Noir filter for maximum supernatural vibes." },
+        { "step": 3, "title": "Unleash your Monster Poses", "text": "Hit Cheese! and strike 3 scary or comedic character poses." }
+      ],
+      "eventTips": [
+        "Add fake cobwebs and jack-o'-lanterns around your webcam station.",
+        "Run an online costume contest where party guests submit their downloaded photo strips to win prizes.",
+        "Use green or purple backlighting to make the Cyberpop filter glow dramatically."
+      ],
+      "faqs": [
+        {
+          "question": "Which filter is best for spooky Halloween photos?",
+          "answer": "The Cyberpop filter gives a supernatural neon glow, while the High Contrast and B&W filters deliver a classic 1930s Universal Monsters cinema aesthetic."
+        }
+      ]
+    },
+    {
+      "slug": "christmas-photobooth",
+      "category": "occasions",
+      "categoryName": "Event & Occasions",
+      "metaTitle": "Christmas Photo Booth Online - Holiday Family Photo Strip Maker",
+      "metaDescription": "Create festive Christmas and holiday photo strips online. Free holiday photo booth with warm glow filters, family selfies, and instant printable download.",
+      "keywords": "christmas photo booth, holiday photo strip maker, online christmas photobooth, xmas photo booth, holiday family photo strip, winter photo booth",
+      "h1": "Christmas Photo Booth Online",
+      "badge": "Holiday Cheer",
+      "subtitle": "Spread festive holiday joy with cozy Christmas family photo strips",
+      "defaultFilter": "saturate(2) contrast(1.2)",
+      "filterBtnData": "saturate(2) contrast(1.2)",
+      "stripStamp": "MERRY CHRISTMAS 🎄",
+      "themeColor": "#38A169",
+      "intro": "Gather around the Christmas tree! Our Christmas & Holiday Photo Booth brings warm, festive cheer to family gatherings, office holiday parties, and winter celebrations. Snap three joyful moments and create instant printable holiday cards.",
+      "features": [
+        { "title": "Festive Warmth Preset", "description": "Brings out rich evergreen tones, festive red sweaters, and warm twinkling Christmas lights." },
+        { "title": "Digital Holiday Cards", "description": "Create instant 3-cut holiday photo strips to email or text to relatives near and far." },
+        { "title": "Ugly Sweater Showcase", "description": "The perfect stage to document family ugly Christmas sweater competitions." },
+        { "title": "Printable Stocking Stuffer", "description": "Print copies on photo paper to slip into holiday greeting cards or hang as tree ornaments." }
+      ],
+      "howTo": [
+        { "step": 1, "title": "Gather Near the Tree", "text": "Wear your holiday pajamas or Santa hats and position your camera in front of holiday lights." },
+        { "step": 2, "title": "Snap 3 Jolly Frames", "text": "Hold up wrapped gifts, raise a mug of hot cocoa, and flash big holiday smiles." },
+        { "step": 3, "title": "Download & Send Holiday Wishes", "text": "Save the printable strip and send it to loved ones with warm holiday greetings." }
+      ],
+      "eventTips": [
+        "Punch a small hole at the top of the printed strip, loop a festive ribbon through, and hang it on your Christmas tree as an ornament.",
+        "Provide reindeer antlers, Santa hats, and gingerbread props for kids and adults.",
+        "Take an annual family photo strip to document how everyone grows year after year."
+      ],
+      "faqs": [
+        {
+          "question": "Can I print these photo strips to mail with Christmas cards?",
+          "answer": "Yes! The exported PNG file is high resolution and fits neatly inside standard A6, A7, and square greeting card envelopes."
+        }
+      ]
+    },
+    {
+      "slug": "cyberpop-photobooth",
+      "category": "aesthetics",
+      "categoryName": "Aesthetics & Filters",
+      "metaTitle": "Cyberpop Photo Booth Online - Neon Hue-Shift Photo Strip Maker",
+      "metaDescription": "Create vibrant neon cyberpop photo strips online. Free futuristic photo booth with hue-rotation filter, glitch aesthetic, and instant high-res PNG download.",
+      "keywords": "cyberpop photobooth, neon photo strip maker, cyberpunk webcam studio, hue rotate filter online, futuristic photo booth, synthwave photo strip",
+      "h1": "Cyberpop Neon Photo Booth",
+      "badge": "Cyberpunk Neon",
+      "subtitle": "Futuristic neon hue shifts and synthwave vibes for bold, vibrant photo strips",
+      "defaultFilter": "hue-rotate(90deg)",
+      "filterBtnData": "hue-rotate(90deg)",
+      "stripStamp": "CYBERPOP • NEON 2077",
+      "themeColor": "#9F7AEA",
+      "intro": "Immerse yourself in neon-drenched synthwave and cyberpunk aesthetics. The Cyberpop Photo Booth shifts color spectrums dynamically to turn ordinary webcam lighting into vivid electric purples, luminous greens, and futuristic cyberpunk visuals.",
+      "features": [
+        { "title": "Dynamic 90° Hue Rotation", "description": "Transform skin tones and ambient lighting into radiant synthwave neon color palettes." },
+        { "title": "High Energy Aesthetic", "description": "Perfect for rave outfits, gaming streamers, festival looks, and creative social avatars." },
+        { "title": "Instant Sound & Flash", "description": "Synchronized flash and audio shutter for an electric arcade experience." },
+        { "title": "High Definition Export", "description": "Zero compression artifacts, preserving vibrant electric neon saturation upon PNG export." }
+      ],
+      "howTo": [
+        { "step": 1, "title": "Power up RGB Lighting", "text": "Turn on your desk RGB LEDs or screen glow to amplify the neon hue shifts." },
+        { "step": 2, "title": "Snap 3 Futuristic Poses", "text": "Strike bold, energetic poses with headphones, cyberpunk visors, or gaming gear." },
+        { "step": 3, "title": "Export Neon Masterpiece", "text": "Download the photo strip and make it your Discord header or Instagram feed highlight." }
+      ],
+      "eventTips": [
+        "Wear reflective clothing, iridescent makeup, or neon accessories.",
+        "Position an iPad with a solid blue or pink screen behind you as an improvised neon lightbar.",
+        "Take a trio of poses showing different angles of your gaming setup."
+      ],
+      "faqs": [
+        {
+          "question": "How does the Cyberpop filter transform colors?",
+          "answer": "The filter applies a 90-degree mathematical color wheel rotation to incoming video frames, converting warm skin tones into alien greens and blues while pushing blues into radiant magentas."
+        }
+      ]
+    },
+    {
+      "slug": "retro-90s-photobooth",
+      "category": "aesthetics",
+      "categoryName": "Aesthetics & Filters",
+      "metaTitle": "Retro 90s Photo Booth Online - 1990s Mall Arcade Photo Strip",
+      "metaDescription": "Relive 90s mall photobooth nostalgia online. High-contrast flash, authentic vintage photo strip layout, and instant downloadable keepsakes.",
+      "keywords": "retro 90s photobooth, 90s mall photo booth, 1990s photo strip maker, disposable camera filter online, nostalgic webcam photo booth, y2k 90s aesthetic",
+      "h1": "Retro 90s Photo Booth Online",
+      "badge": "90s Mall Nostalgia",
+      "subtitle": "Relive the iconic 1990s mall arcade photo booth experience right in your browser",
+      "defaultFilter": "contrast(1.4) brightness(1.1)",
+      "filterBtnData": "contrast(1.4) brightness(1.1)",
+      "stripStamp": "MALL ARCADE • 1998",
+      "themeColor": "#4C51BF",
+      "intro": "Remember sliding the velvet curtain shut in a bustling 1990s mall arcade booth? Our Retro 90s Photo Booth faithfully recreates that raw direct-flash aesthetic, bold contrast, and collectible 3-cut vertical paper strip layout.",
+      "features": [
+        { "title": "Direct Flash Simulation", "description": "High-contrast, direct-flash punch reminiscent of 90s disposable cameras and arcade booths." },
+        { "title": "Mall Arcade Header Stamp", "description": "Iconic vintage typography and date stamping at the top of every generated strip." },
+        { "title": "Nostalgic 3-Cut Frame", "description": "Classic 3-photo vertical strip proportioned identically to authentic 90s arcade prints." },
+        { "title": "Instant Retake & Download", "description": "Unlike real coin-operated booths, retake your shots as many times as you like for free." }
+      ],
+      "howTo": [
+        { "step": 1, "title": "Rock 90s Outfits & Hair", "text": "Throw on baggy jeans, bucket hats, butterfly clips, or flannel shirts." },
+        { "step": 2, "title": "Pose Like It's 1999", "text": "Throw peace signs, rock-on hand signs, or cool slouched expressions across 3 snapshots." },
+        { "step": 3, "title": "Download the Strip", "text": "Save your finished strip to print out and tape into your scrapbook or high school binder." }
+      ],
+      "eventTips": [
+        "Print the strip on glossy photo paper and stick it in your retro locker or on your fridge.",
+        "Take silly duck-face or serious grunge poses for authentic 90s teen angst.",
+        "Play 90s pop or grunge music in the background while taking your photos."
+      ],
+      "faqs": [
+        {
+          "question": "What gives 90s photo booths their distinctive look?",
+          "answer": "90s mall booths relied on harsh front-facing xenon strobe flash bulbs and high-contrast photographic paper, creating bold outlines, saturated colors, and punchy highlights."
+        }
+      ]
+    },
+    {
+      "slug": "y2k-photobooth",
+      "category": "aesthetics",
+      "categoryName": "Aesthetics & Filters",
+      "metaTitle": "Y2K Photo Booth Online - Early 2000s Aesthetic Photo Strip Maker",
+      "metaDescription": "Create early 2000s Y2K aesthetic photo strips online. Free webcam photobooth with glossy pink vibes, digital flash, and retro strip download.",
+      "keywords": "y2k photobooth, 2000s photo strip maker, y2k aesthetic photo booth, digital camera filter 2000s, mcbling photobooth, cyber y2k webcam",
+      "h1": "Y2K Aesthetic Photo Booth",
+      "badge": "Y2K 2000s Era",
+      "subtitle": "Step into the early 2000s with glossy, vibrant Y2K aesthetic photo strips",
+      "defaultFilter": "brightness(1.25) saturate(1.2)",
+      "filterBtnData": "brightness(1.25) saturate(1.2)",
+      "stripStamp": "Y2K BABE • 2004",
+      "themeColor": "#ED64A6",
+      "intro": "Channel your inner early-2000s pop star! Our Y2K Aesthetic Photo Booth brings high-gloss brightness, saturated pastel tones, and nostalgic digital-camera vibes right to your laptop or phone screen.",
+      "features": [
+        { "title": "Glossy Cyber-Pink Aesthetic", "description": "High brightness and lush saturation capture the iconic McBling and early 2000s digital camera aesthetic." },
+        { "title": "Digicam Flash Effect", "description": "Simulates early compact CCD digital camera flash pop and vivid color reproduction." },
+        { "title": "Aesthetic Card Framing", "description": "Glossy white vertical strip format styled like classic early 2000s Japanese Purikura booths." },
+        { "title": "Perfect for Lock Screens", "description": "Exported in a vertical ratio that fits cleanly on mobile wallpapers and Pinterest boards." }
+      ],
+      "howTo": [
+        { "step": 1, "title": "Put on Y2K Fits", "text": "Wear tracksuits, tinted frameless shades, lip gloss, and layered jewelry." },
+        { "step": 2, "title": "Strike Early 2000s Poses", "text": "Try over-the-glasses glances, double peace signs, and top-angle selfies." },
+        { "step": 3, "title": "Export Your Y2K Strip", "text": "Download the PNG strip and share it to your Pinterest boards or Instagram story." }
+      ],
+      "eventTips": [
+        "Add metallic or silver confetti into your backdrop for that authentic space-age Y2K look.",
+        "Take photos using the top-down high-angle technique popular on early 2000s digicams.",
+        "Layer downloaded strips with digital stickers in your favorite editing app."
+      ],
+      "faqs": [
+        {
+          "question": "What is the difference between 90s and Y2K photo booths?",
+          "answer": "While 90s photo booths focused on grunge and analog mall arcade paper prints, Y2K aesthetic focuses on early digital camera optimism, glossy candy colors, futurism, and pink McBling energy."
+        }
+      ]
+    },
+    {
+      "slug": "free-online-webcam-photobooth",
+      "category": "tools",
+      "categoryName": "Tools & Formats",
+      "metaTitle": "Free Online Webcam Photo Booth - Instant Photo Strip Studio",
+      "metaDescription": "Free browser-based webcam photo booth. Take photos with live aesthetic filters, countdown timer, and download high-resolution 3-photo strips without sign-up.",
+      "keywords": "free online webcam photobooth, webcam photo booth no download, browser photobooth free, instant photo booth online, webcam photo strip creator, online snapshot camera",
+      "h1": "Free Online Webcam Photo Booth",
+      "badge": "100% Free & No Sign-up",
+      "subtitle": "Instant browser-based photo booth studio with live filters and zero software downloads",
+      "defaultFilter": "none",
+      "filterBtnData": "none",
+      "stripStamp": "PHOTOBOOTH STUDIO",
+      "themeColor": "#D4537E",
+      "intro": "Looking for a fast, free, and private online webcam photo booth? Photobooth Studio turns any web browser on your laptop, Mac, Chromebook, or smartphone into a complete photo studio in one click. No software to download, no account required, and 100% privacy protected.",
+      "features": [
+        { "title": "No Install or Sign-up", "description": "Works instantly in Google Chrome, Safari, Firefox, and Edge with zero login barriers." },
+        { "title": "Multi-Filter Live Studio", "description": "Toggle in real-time between Normal, B&W, Vintage Sepia, High Contrast, Bright Glow, Cyberpop, and Vivid." },
+        { "title": "3-Second Timer & Shutter Audio", "description": "Hands-free countdown timer with mechanical sound effects and visual flash overlay." },
+        { "title": "High-Res PNG Export", "description": "Renders pristine 300 DPI vertical 3-photo strips ready for instant download and printing." }
+      ],
+      "howTo": [
+        { "step": 1, "title": "Allow Camera Access", "text": "Click 'Allow' when your browser asks for webcam permission to display your live video feed." },
+        { "step": 2, "title": "Pick a Filter & Pose", "text": "Choose your preferred aesthetic filter, click 'Cheese!', and strike 3 distinct poses." },
+        { "step": 3, "title": "Download Your Strip", "text": "Click 'Download' to immediately save your high-resolution PNG photo strip." }
+      ],
+      "eventTips": [
+        "Use natural window lighting or a soft desk lamp facing you for the cleanest webcam image.",
+        "Click the flip icon (↺) to toggle between mirror selfie view and standard camera orientation.",
+        "Bookmark this page for instant access whenever you want quick aesthetic snapshot strips."
+      ],
+      "faqs": [
+        {
+          "question": "Do you save or upload my photos to your servers?",
+          "answer": "No! Photobooth Studio operates 100% client-side inside your browser. Your video stream and captured photos never leave your device."
+        },
+        {
+          "question": "Does this work on Chromebooks, Macs, and Windows PCs?",
+          "answer": "Yes, Photobooth Studio works on all operating systems including macOS, Windows, ChromeOS, Linux, iOS, and Android."
+        },
+        {
+          "question": "Is there any limit on how many photo strips I can make?",
+          "answer": "No limits whatsoever! You can create, retake, and download unlimited photo strips completely free."
+        }
+      ]
+    },
+    {
+      "slug": "3-photo-strip-maker",
+      "category": "tools",
+      "categoryName": "Tools & Formats",
+      "metaTitle": "3-Photo Strip Maker Online - Classic Vertical Strip Creator",
+      "metaDescription": "Create classic 3-photo vertical strips online. Free photo strip generator with live webcam capture, aesthetic filters, and instant printable download.",
+      "keywords": "3 photo strip maker, vertical photo strip creator, 3 cut photobooth online, photo strip generator, printable photo strip maker, 3 picture collage camera",
+      "h1": "3-Photo Strip Maker Online",
+      "badge": "Classic 3-Cut",
+      "subtitle": "Create perfectly proportioned 3-photo vertical strips ready for printing and sharing",
+      "defaultFilter": "none",
+      "filterBtnData": "none",
+      "stripStamp": "3-PHOTO STRIP",
+      "themeColor": "#805AD5",
+      "intro": "The 3-photo vertical strip is the gold standard of arcade and carnival photo booths. Our 3-Photo Strip Maker lets you capture three sequential portraits and automatically compiles them into an aesthetic, balanced vertical card with custom branding and date stamps.",
+      "features": [
+        { "title": "Golden Ratio Proportions", "description": "Engineered with balanced padding, margins, and gaps for optimal visual aesthetics." },
+        { "title": "Live 3-Shot Sequence Counter", "description": "Interactive badge displays your 0/3, 1/3, 2/3 progress so you always know your sequence." },
+        { "title": "Print Ready Resolution", "description": "Generates crisp high-density pixels formatted for standard 2x6 and 4x6 photo paper prints." },
+        { "title": "Instant Retake Button", "description": "Don't love a shot? Hit 'Retake' to reset and start a fresh 3-pose session in seconds." }
+      ],
+      "howTo": [
+        { "step": 1, "title": "Plan Your 3-Pose Story", "text": "Plan 3 sequential expressions: e.g. Serious, Smiling, and Goofy, or a 3-part storyline." },
+        { "step": 2, "title": "Capture the Strip", "text": "Click 'Cheese!' 3 times to fill each slot on your live preview strip." },
+        { "step": 3, "title": "Export & Print", "text": "Download the combined PNG strip with a single click and send it to your color printer." }
+      ],
+      "eventTips": [
+        "Tell a micro-story across the 3 frames (e.g. looking left, looking center, looking right).",
+        "Print multiple strips on a single 4x6 sheet and slice them down the middle with scissors.",
+        "Use them as personalized bookmarks for your favorite books and journals."
+      ],
+      "faqs": [
+        {
+          "question": "What dimensions are the downloaded 3-photo strips?",
+          "answer": "The generated strip is exported at 500px wide by approximately 1200px tall in high-density canvas resolution, ideal for sharp 2x6 inch physical photo strip prints."
+        }
+      ]
+    },
+    {
+      "slug": "virtual-photobooth",
+      "category": "tools",
+      "categoryName": "Tools & Formats",
+      "metaTitle": "Virtual Photo Booth Online - Remote Party & Zoom Photo Strips",
+      "metaDescription": "Free virtual photo booth for remote teams, Zoom meetings, and virtual parties. Capture team photo strips, apply aesthetic filters, and download instantly.",
+      "keywords": "virtual photo booth, remote party photobooth, zoom photo booth, virtual event photo strip, online photo booth for teams, virtual happy hour photobooth",
+      "h1": "Virtual Photo Booth for Remote Events",
+      "badge": "Virtual & Remote",
+      "subtitle": "Engage remote teams, Zoom parties, and virtual events with instant photo strips",
+      "defaultFilter": "contrast(1.4) brightness(1.1)",
+      "filterBtnData": "contrast(1.4) brightness(1.1)",
+      "stripStamp": "VIRTUAL TEAM CELEBRATION",
+      "themeColor": "#2B6CB0",
+      "intro": "Bring remote coworkers and online event attendees together! Our Virtual Photo Booth is the ideal icebreaker for Zoom happy hours, remote team building, webinars, and virtual family gatherings. Everyone gets to create and share their own themed photo strip.",
+      "features": [
+        { "title": "Zero Corporate Software Blockers", "description": "Runs in standard secure browser sandboxes without requiring IT admin software approval." },
+        { "title": "Engaging Team Icebreaker", "description": "Dedicate 5 minutes of your meeting for everyone to snap their 3-cut strip and post in Slack or Teams." },
+        { "title": "Custom Theme & Lighting", "description": "Enhances dim home office lighting with bright contrast and skin tone optimization." },
+        { "title": "100% Free for Unlimited Teams", "description": "No per-user licensing fees or tiered corporate paywalls." }
+      ],
+      "howTo": [
+        { "step": 1, "title": "Share the Link in Chat", "text": "Drop this page link into your Zoom, Microsoft Teams, or Google Meet meeting chat." },
+        { "step": 2, "title": "Take 3 Fun Work-from-Home Poses", "text": "Show off your favorite coffee mug, work pet, or funny home office accessories." },
+        { "step": 3, "title": "Post in Team Slack Channel", "text": "Download the photo strip and share it in your team's #watercooler channel." }
+      ],
+      "eventTips": [
+        "Host a 'Best WFH Pet' or 'Best Coffee Mug' photo strip competition during team all-hands.",
+        "Combine team members' strips into a mosaic collage for your company newsletter or LinkedIn post.",
+        "Encourage different backgrounds and virtual props to spark fun team conversations."
+      ],
+      "faqs": [
+        {
+          "question": "Can I use this while my camera is already on in Zoom?",
+          "answer": "Since webcams can only be accessed by one application at a time on some operating systems, simply pause your Zoom video feed for a moment while snapping your photobooth strip."
+        }
+      ]
+    },
+    {
+      "slug": "digital-polaroid-photobooth",
+      "category": "tools",
+      "categoryName": "Tools & Formats",
+      "metaTitle": "Digital Polaroid Photo Booth Online - Instant Film Strip Creator",
+      "metaDescription": "Create digital polaroid style photo strips online. Free instant camera photo booth with vintage border framing, analog flash, and instant download.",
+      "keywords": "digital polaroid photobooth, polaroid photo strip online, instant film photo booth, instant camera webcam studio, polaroid frame photo strip maker",
+      "h1": "Digital Polaroid Photo Booth",
+      "badge": "Instant Film",
+      "subtitle": "Classic instant-film borders and analog warmth captured right from your webcam",
+      "defaultFilter": "brightness(1.25) saturate(1.2)",
+      "filterBtnData": "brightness(1.25) saturate(1.2)",
+      "stripStamp": "POLAROID MEMORIES",
+      "themeColor": "#D69E2E",
+      "intro": "Love the aesthetic nostalgia of instant film cameras? Our Digital Polaroid Photo Booth combines the spontaneous, tactile feel of vintage instant film with the convenience of modern browser technology.",
+      "features": [
+        { "title": "Instant Film Framing", "description": "Clean white borders and bottom caption space styled after iconic square and mini instant film prints." },
+        { "title": "Analog Light Simulation", "description": "Warm, luminous highlights and soft shadow rolloff mimic authentic instant film emulsions." },
+        { "title": "No Film Costs", "description": "Enjoy the endless joy of instant photography without worrying about expensive film cartridges." },
+        { "title": "Printable Keepsakes", "description": "High-resolution output ready to print, write on with permanent marker, and tape to walls." }
+      ],
+      "howTo": [
+        { "step": 1, "title": "Set your Scene", "text": "Find warm ambient light or cozy room decor." },
+        { "step": 2, "title": "Snap 3 Spontaneous Shots", "text": "Capture candid, unposed expressions for the most authentic instant-film feeling." },
+        { "step": 3, "title": "Download & Write Captions", "text": "Print your strip and write handwritten dates or quotes in the bottom border space." }
+      ],
+      "eventTips": [
+        "String up fairy lights and wooden clothespins to display your printed digital polaroid strips.",
+        "Write handwritten dates and locations on the bottom white margin with a fine Sharpie.",
+        "Take candid shots of friends unawares for authentic instant-camera documentary vibes."
+      ],
+      "faqs": [
+        {
+          "question": "Can I write on the downloaded polaroid photo strips?",
+          "answer": "Yes! The bottom border of the photo strip is specifically proportioned to provide space for handwritten captions, names, or celebration dates once printed."
+        }
+      ]
+    },
+    {
+      "slug": "sepia-photostrip-maker",
+      "category": "aesthetics",
+      "categoryName": "Aesthetics & Filters",
+      "metaTitle": "Sepia Photo Strip Maker Online - Antique Toned Photo Booth",
+      "metaDescription": "Generate antique sepia photo strips online. Free nostalgic webcam photobooth with warm bronze sepia tones, analog flash, and instant PNG download.",
+      "keywords": "sepia photo strip maker, sepia photobooth online, antique photo booth, bronze tone photo strip, old fashioned photo booth webcam",
+      "h1": "Sepia Photo Strip Maker",
+      "badge": "Antique Warmth",
+      "subtitle": "Rich bronze and amber tones for authentic 19th and 20th century antique portraits",
+      "defaultFilter": "sepia(1) contrast(1.1)",
+      "filterBtnData": "sepia(1) contrast(1.1)",
+      "stripStamp": "ANTIQUE SEPIA STRIP",
+      "themeColor": "#975A16",
+      "intro": "Transport your portraits back to the golden era of antique photography. Our Sepia Photo Strip Maker infuses your webcam snapshots with rich amber undertones, deep chocolate shadows, and authentic aged photographic character.",
+      "features": [
+        { "title": "Authentic Antique Toning", "description": "Simulates traditional chemical sepia toning used in 19th-century photographic preservation." },
+        { "title": "Warm & Flattering", "description": "Sepia tones naturally soften skin blemishes and create a radiant, warm portrait glow." },
+        { "title": "Archival Strip Style", "description": "Vertical multi-pose strip formatted like vintage family album keepsakes." },
+        { "title": "Instant 300 DPI Export", "description": "High-density PNG export ensures crisp lines and smooth tonal transitions when printed." }
+      ],
+      "howTo": [
+        { "step": 1, "title": "Select Sepia Preset", "text": "Your live camera feed instantly transforms into warm sepia tones." },
+        { "step": 2, "title": "Capture 3 Antique Poses", "text": "Try a stoic 19th-century portrait pose, a warm smile, and a profile view." },
+        { "step": 3, "title": "Download Antique Keepsake", "text": "Save your high-res sepia strip to share or frame in vintage wooden frames." }
+      ],
+      "eventTips": [
+        "Pair with Victorian, western, or retro 1920s costumes for themed party photo booths.",
+        "Print on parchment or textured linen paper for museum-quality vintage prints.",
+        "Great for historical school projects, family heritage books, and theater cast keepsakes."
+      ],
+      "faqs": [
+        {
+          "question": "What is sepia toning in photography?",
+          "answer": "Sepia toning is a chemical process developed in the 1880s where silver in photographic prints was converted to a sulfide compound, giving photos a warm reddish-brown hue and extending their archival lifespan."
+        }
+      ]
+    },
+    {
+      "slug": "party-photo-strip-maker",
+      "category": "occasions",
+      "categoryName": "Event & Occasions",
+      "metaTitle": "Party Photo Strip Maker Online - Free Event Photo Booth",
+      "metaDescription": "Create colorful event and party photo strips online. Free photo booth with live party filters, 3-second countdown, and high-resolution PNG download.",
+      "keywords": "party photo strip maker, event photo booth online, celebration photo booth, party snapshot camera, photobooth for house party, fun photo strip maker",
+      "h1": "Party Photo Strip Maker Online",
+      "badge": "Party Time",
+      "subtitle": "Turn any house party, corporate bash, or celebration into an instant photo studio",
+      "defaultFilter": "saturate(2) contrast(1.2)",
+      "filterBtnData": "saturate(2) contrast(1.2)",
+      "stripStamp": "PARTY NIGHT MEMORIES",
+      "themeColor": "#E53E3E",
+      "intro": "Elevate your next house party, celebration, or gathering with an interactive, free party photo booth. Let your friends snap hilarious, glamorous, and candid 3-photo strips all night long!",
+      "features": [
+        { "title": "High Energy Vivid Preset", "description": "Boosts party lights, colorful drinks, and celebration decor with rich saturation." },
+        { "title": "Hands-Free 3s Timer", "description": "Gives party groups time to change props, jump in the frame, and strike fresh poses." },
+        { "title": "Zero Wait Time", "description": "Instant generation and download means zero bottlenecks for guests waiting in line." },
+        { "title": "Works on Any Screen", "description": "Display on a laptop, iPad, or smartphone propped on the party beverage bar." }
+      ],
+      "howTo": [
+        { "step": 1, "title": "Set up a Party Station", "text": "Prop your device on a table with party props and good ambient lighting." },
+        { "step": 2, "title": "Grab Party Props", "text": "Gather friends, hold up funny signs, and hit 'Cheese!' to start the 3-shot sequence." },
+        { "step": 3, "title": "Download & Text", "text": "Download the strip instantly and text it to everyone in the photo." }
+      ],
+      "eventTips": [
+        "Print a QR code linking to this page and tape it near the bar and entrance.",
+        "Set up a bowl of disposable props: feather boas, funny glasses, and themed cutout signs.",
+        "Collect everyone's digital strips to make a party recap reel for Instagram or TikTok."
+      ],
+      "faqs": [
+        {
+          "question": "Can I run this on a tablet continuously during a 4-hour party?",
+          "answer": "Yes! The application runs completely in browser memory with efficient performance and does not overheat devices or timeout."
+        }
+      ]
+    }
+  ]
+}
