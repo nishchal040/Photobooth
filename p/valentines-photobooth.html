@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,14 +9,14 @@
     <meta name="author" content="Photobooth Studio">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#E53E3E">
-    <link rel="canonical" href="https://photobooth.app/p/valentines-photobooth.html">
+    <link rel="canonical" href="https://photobooth.app/p/valentines-photobooth">
 
     <!-- Open Graph / Facebook / WhatsApp -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Valentine's Day Photo Booth Online - Couple Photo Strip Maker">
     <meta property="og:description" content="Create cute Valentine's Day photo strips with your partner. Free romantic photo booth online with aesthetic filters, countdown timer, and high-res download.">
     <meta property="og:image" content="../assets/logo.svg">
-    <meta property="og:url" content="https://photobooth.app/p/valentines-photobooth.html">
+    <meta property="og:url" content="https://photobooth.app/p/valentines-photobooth">
     <meta property="og:site_name" content="Photobooth Studio">
 
     <!-- Twitter Card -->
@@ -34,7 +34,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Outfit:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chewy&family=Outfit:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="../style.css">
 
@@ -44,11 +44,11 @@
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "Valentine’s Day Photo Booth - Photobooth Studio",
+    "name": "Valentineâ€™s Day Photo Booth - Photobooth Studio",
     "applicationCategory": "MultimediaApplication",
     "operatingSystem": "All Modern Web Browsers (iOS, Android, Windows, macOS, Linux, ChromeOS)",
     "description": "Create cute Valentine's Day photo strips with your partner. Free romantic photo booth online with aesthetic filters, countdown timer, and high-res download.",
-    "url": "https://photobooth.app/p/valentines-photobooth.html",
+    "url": "https://photobooth.app/p/valentines-photobooth",
     "browserRequirements": "Requires HTML5 Canvas and MediaDevices camera stream permissions.",
     "offers": {
       "@type": "Offer",
@@ -75,16 +75,16 @@
       {
         "@type": "ListItem",
         "position": 3,
-        "name": "Valentine’s Day Photo Booth",
-        "item": "https://photobooth.app/p/valentines-photobooth.html"
+        "name": "Valentineâ€™s Day Photo Booth",
+        "item": "https://photobooth.app/p/valentines-photobooth"
       }
     ]
   },
   {
     "@context": "https://schema.org",
     "@type": "HowTo",
-    "name": "How to Create Valentine’s Day Photo Booth Photo Strips Online",
-    "description": "Step-by-step tutorial to create printable Valentine’s Day Photo Booth photo strips directly inside your browser.",
+    "name": "How to Create Valentineâ€™s Day Photo Booth Photo Strips Online",
+    "description": "Step-by-step tutorial to create printable Valentineâ€™s Day Photo Booth photo strips directly inside your browser.",
     "step": [
       {
         "@type": "HowToStep",
@@ -127,21 +127,21 @@
     <div class="main">
         <!-- Breadcrumb Navigation -->
         <nav class="seo-breadcrumbs" aria-label="Breadcrumb">
-            <a href="../index.html">Home</a>
+            <a href="/">Home</a>
             <span class="separator">/</span>
             <span>Event & Occasions</span>
             <span class="separator">/</span>
-            <span aria-current="page">Valentine’s Day Photo Booth</span>
+            <span aria-current="page">Valentineâ€™s Day Photo Booth</span>
         </nav>
 
         <!-- Main Application Header -->
         <header class="app-header">
             <div class="brand-container">
-                <a href="../index.html" title="Back to Photobooth Home">
+                <a href="/" title="Back to Photobooth Home">
                     <img src="../assets/logo.svg" alt="Photobooth Studio Logo" class="brand-logo" width="44" height="44">
                 </a>
                 <div class="title-wrap">
-                    <h1>Valentine’s Day Photo Booth <span class="badge" style="background: #E53E3E;">Love & Romance</span></h1>
+                    <h1>Valentineâ€™s Day Photo Booth <span class="badge" style="background: #E53E3E;">Love & Romance</span></h1>
                     <p class="subtitle">Capture sweet romantic moments with your favorite person in a classic photo strip</p>
                 </div>
             </div>
@@ -167,7 +167,7 @@
                     <!-- Photostrip Output Side -->
                     <aside class="photostrip-wrapper" aria-label="Captured Photo Strip">
                         <div class="photostrip-header">
-                            <span class="strip-brand">📷 VALENTINE MEMORIES ♥</span>
+                            <span class="strip-brand"><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg> <span>VALENTINE MEMORIES</span></span>
                             <span id="photo-count-badge" class="strip-count">0/3</span>
                         </div>
                         <div id="photos" class="photostrip-frame">
@@ -195,46 +195,69 @@
 
                         <!-- Action Controls Toolbar -->
                         <div class="btns-toolbar">
-                            <button id="flip-btn" class="flip-btn" aria-label="Flip Camera or Mirror Toggle" title="Flip Camera / Mirror">↺</button>
-                            <button id="timer-toggle" class="btn-secondary" aria-label="Toggle 3-second countdown timer" title="Toggle 3s Timer">⏱️ <span id="timer-label">Off</span></button>
+                            <button id="flip-btn" class="flip-btn" aria-label="Flip Camera or Mirror Toggle" title="Flip Camera / Mirror">
+                                <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 21h5v-5"/></svg>
+                            </button>
+                            <button id="timer-toggle" class="btn-secondary" aria-label="Toggle 3-second countdown timer" title="Toggle 3s Timer">
+                                <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2"/><path d="M12 2v3"/><path d="m18 5-1.5 1.5"/><path d="m6 5 1.5 1.5"/></svg>
+                                <span id="timer-label">Off</span>
+                            </button>
                             <button id="snap" class="btn-snap" aria-label="Capture Photo">Cheese!</button>
-                            <button id="reset-btn" class="btn-secondary" aria-label="Clear and Retake Photos" title="Reset Photos">🔄 Retake</button>
-                            <button id="download" class="btn-download" aria-label="Download Photo Strip PNG">💾 Download</button>
+                            <button id="reset-btn" class="btn-secondary" aria-label="Clear and Retake Photos" title="Reset Photos">
+                                <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+                                Retake
+                            </button>
+                            <button id="download" class="btn-download" aria-label="Download Photo Strip PNG">
+                                <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                Download
+                            </button>
                         </div>
                         <canvas id="canvas" style="display:none;"></canvas>
                     </article>
                 </div>
             </section>
-
             <!-- Programmatic SEO Contextual Content & Guides -->
             <article class="seo-article">
+                <!-- Backlink CTA Banner to Main Camera Studio -->
+                <div class="studio-return-banner">
+                    <div class="return-banner-text">
+                        <span class="badge" style="width: fit-content;">10 VIRAL STUDIO MODES</span>
+                        <h3>Explore Our Full Photobooth Studio</h3>
+                        <p>Looking for Retro Newspaper headlines, Y2K Digicam, Movie Posters, Trading Cards, or Comic Book strips? Access all 10 viral studio formats with customizable text and instant captures.</p>
+                    </div>
+                    <a href="/" class="btn-snap" title="Return to Main Studio">
+                        <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                        Main Camera Studio &rarr;
+                    </a>
+                </div>
+
                 <!-- Overview & Features -->
                 <section class="seo-card">
-                    <h2>📸 About Valentine’s Day Photo Booth</h2>
+                    <h2><svg class="icon icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg> About Valentineâ€™s Day Photo Booth</h2>
                     <p class="lead">Celebrate date night, an anniversary, or Valentine's Day with our intimate couple photo booth. Snap three romantic or goofy poses, apply a warm glow filter, and download a cute digital strip you can cherish forever.</p>
                     
                     <div class="seo-features-grid">
                         
     <div class="feature-item">
-      <h3>✨ Romantic Glow & Warmth</h3>
+      <h3><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg> Romantic Glow & Warmth</h3>
       <p>Softens lighting to create cozy, flattering portrait tones for couple selfies.</p>
     </div>
   
 
     <div class="feature-item">
-      <h3>✨ Heart-Stamped Layout</h3>
+      <h3><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg> Heart-Stamped Layout</h3>
       <p>Custom Valentine-themed header stamp that makes your strip a thoughtful digital gift.</p>
     </div>
   
 
     <div class="feature-item">
-      <h3>✨ Long-Distance Date Night</h3>
+      <h3><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg> Long-Distance Date Night</h3>
       <p>Take matching strips over FaceTime or Zoom date nights from anywhere in the world.</p>
     </div>
   
 
     <div class="feature-item">
-      <h3>✨ Print for Wallets & Lockers</h3>
+      <h3><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg> Print for Wallets & Lockers</h3>
       <p>High-res output prints sharply on 4x6 photo paper to slip into wallets and card gifts.</p>
     </div>
   
@@ -242,7 +265,7 @@
 
                     
     <div class="seo-tips-box">
-      <h3>💡 Pro Ideas & Tips for Love & Romance</h3>
+      <h3><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7z"/></svg> Pro Ideas &amp; Tips for Love & Romance</h3>
       <ul>
         <li>Include little paper hearts or chocolates as props.</li>
 <li>Print the strip and attach it to a bouquet of flowers or a box of chocolates.</li>
@@ -254,7 +277,7 @@
 
                 <!-- How It Works Section -->
                 <section class="seo-card">
-                    <h2>✨ How to Create Your Valentine’s Day Photo Booth Strip</h2>
+                    <h2><svg class="icon icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg> How to Create Your Valentineâ€™s Day Photo Booth Strip</h2>
                     <div class="seo-steps-container">
                         
     <div class="step-card">
@@ -282,7 +305,7 @@
 
                 <!-- Frequently Asked Questions (FAQ) Section -->
                 <section class="seo-card">
-                    <h2>❓ Frequently Asked Questions</h2>
+                    <h2><svg class="icon icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg> Frequently Asked Questions</h2>
                     <div class="seo-faq-section">
                         
     <div class="faq-item">
@@ -300,30 +323,35 @@
 
                 <!-- Internal Linking Hub Matrix -->
                 <section class="seo-card seo-related-hub">
-                    <h2>🌟 Explore More Photo Booth Styles & Occasions</h2>
+                    <h2><svg class="icon icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg> Explore More Photo Booth Styles &amp; Occasions</h2>
                     <p>Discover our complete suite of free browser photobooths, vintage filters, and celebratory strip creators:</p>
                     
       <div class="seo-category-group">
         <h3>Event & Occasions</h3>
         <div class="seo-pills-grid">
-    <a href="wedding-photobooth.html" class="seo-pill" title="Online Wedding Photo Booth - Free Guest Photo Strip Maker">Wedding Edition</a><a href="birthday-photobooth.html" class="seo-pill" title="Online Birthday Photo Booth - Fun Birthday Photo Strip Maker">Birthday Party</a><a href="graduation-photobooth.html" class="seo-pill" title="Online Graduation Photo Booth - Class Celebration Strip Maker">Class of 2026</a><a href="baby-shower-photobooth.html" class="seo-pill" title="Online Baby Shower Photo Booth - Sweet Celebration Photo Strips">Baby Celebration</a><a href="bachelorette-photobooth.html" class="seo-pill" title="Online Bachelorette Party Photo Booth - Hen Party Strip Maker">Bride Tribe</a><span class="seo-pill current" aria-current="page">Love & Romance</span><a href="halloween-photobooth.html" class="seo-pill" title="Halloween Photo Booth Online - Spooky Costume Photo Strip Maker">Spooky Season</a><a href="christmas-photobooth.html" class="seo-pill" title="Christmas Photo Booth Online - Holiday Family Photo Strip Maker">Holiday Cheer</a><a href="party-photo-strip-maker.html" class="seo-pill" title="Party Photo Strip Maker Online - Free Event Photo Booth">Party Time</a>
+    <a href="/p/wedding-photobooth" class="seo-pill" title="Online Wedding Photo Booth - Free Guest Photo Strip Maker">Wedding Edition</a><a href="/p/birthday-photobooth" class="seo-pill" title="Online Birthday Photo Booth - Fun Birthday Photo Strip Maker">Birthday Party</a><a href="/p/graduation-photobooth" class="seo-pill" title="Online Graduation Photo Booth - Class Celebration Strip Maker">Class of 2026</a><a href="/p/baby-shower-photobooth" class="seo-pill" title="Online Baby Shower Photo Booth - Sweet Celebration Photo Strips">Baby Celebration</a><a href="/p/bachelorette-photobooth" class="seo-pill" title="Online Bachelorette Party Photo Booth - Hen Party Strip Maker">Bride Tribe</a><span class="seo-pill current" aria-current="page">Love & Romance</span><a href="/p/halloween-photobooth" class="seo-pill" title="Halloween Photo Booth Online - Spooky Costume Photo Strip Maker">Spooky Season</a><a href="/p/christmas-photobooth" class="seo-pill" title="Christmas Photo Booth Online - Holiday Family Photo Strip Maker">Holiday Cheer</a><a href="/p/party-photo-strip-maker" class="seo-pill" title="Party Photo Strip Maker Online - Free Event Photo Booth">Party Time</a>
         </div>
       </div>
     
       <div class="seo-category-group">
         <h3>Aesthetics & Filters</h3>
         <div class="seo-pills-grid">
-    <a href="vintage-photobooth.html" class="seo-pill" title="Vintage Photo Booth Online - Retro Sepia Photo Strip Maker">Retro Classic</a><a href="black-and-white-photobooth.html" class="seo-pill" title="Black and White Photo Booth Online - Monochrome Photo Strip">Monochrome Studio</a><a href="korean-photobooth.html" class="seo-pill" title="Korean Photo Booth Online - Insaeng Negeot 4-Cut Style Maker">Life4Cuts Aesthetic</a><a href="cyberpop-photobooth.html" class="seo-pill" title="Cyberpop Photo Booth Online - Neon Hue-Shift Photo Strip Maker">Cyberpunk Neon</a><a href="retro-90s-photobooth.html" class="seo-pill" title="Retro 90s Photo Booth Online - 1990s Mall Arcade Photo Strip">90s Mall Nostalgia</a><a href="y2k-photobooth.html" class="seo-pill" title="Y2K Photo Booth Online - Early 2000s Aesthetic Photo Strip Maker">Y2K 2000s Era</a><a href="sepia-photostrip-maker.html" class="seo-pill" title="Sepia Photo Strip Maker Online - Antique Toned Photo Booth">Antique Warmth</a>
+    <a href="/p/vintage-photobooth" class="seo-pill" title="Vintage Photo Booth Online - Retro Sepia Photo Strip Maker">Retro Classic</a><a href="/p/black-and-white-photobooth" class="seo-pill" title="Black and White Photo Booth Online - Monochrome Photo Strip">Monochrome Studio</a><a href="/p/korean-photobooth" class="seo-pill" title="Korean Photo Booth Online - Insaeng Negeot 4-Cut Style Maker">Life4Cuts Aesthetic</a><a href="/p/cyberpop-photobooth" class="seo-pill" title="Cyberpop Photo Booth Online - Neon Hue-Shift Photo Strip Maker">Cyberpunk Neon</a><a href="/p/retro-90s-photobooth" class="seo-pill" title="Retro 90s Photo Booth Online - 1990s Mall Arcade Photo Strip">90s Mall Nostalgia</a><a href="/p/y2k-photobooth" class="seo-pill" title="Y2K Photo Booth Online - Early 2000s Aesthetic Photo Strip Maker">Y2K 2000s Era</a><a href="/p/sepia-photostrip-maker" class="seo-pill" title="Sepia Photo Strip Maker Online - Antique Toned Photo Booth">Antique Warmth</a>
         </div>
       </div>
     
       <div class="seo-category-group">
         <h3>Tools & Formats</h3>
         <div class="seo-pills-grid">
-    <a href="free-online-webcam-photobooth.html" class="seo-pill" title="Free Online Webcam Photo Booth - Instant Photo Strip Studio">100% Free & No Sign-up</a><a href="3-photo-strip-maker.html" class="seo-pill" title="3-Photo Strip Maker Online - Classic Vertical Strip Creator">Classic 3-Cut</a><a href="virtual-photobooth.html" class="seo-pill" title="Virtual Photo Booth Online - Remote Party & Zoom Photo Strips">Virtual & Remote</a><a href="digital-polaroid-photobooth.html" class="seo-pill" title="Digital Polaroid Photo Booth Online - Instant Film Strip Creator">Instant Film</a>
+    <a href="/p/free-online-webcam-photobooth" class="seo-pill" title="Free Online Webcam Photo Booth - Instant Photo Strip Studio">100% Free & No Sign-up</a><a href="/p/3-photo-strip-maker" class="seo-pill" title="3-Photo Strip Maker Online - Classic Vertical Strip Creator">Classic 3-Cut</a><a href="/p/virtual-photobooth" class="seo-pill" title="Virtual Photo Booth Online - Remote Party & Zoom Photo Strips">Virtual & Remote</a><a href="/p/digital-polaroid-photobooth" class="seo-pill" title="Digital Polaroid Photo Booth Online - Instant Film Strip Creator">Instant Film</a>
         </div>
       </div>
-    
+                    <div style="text-align: center; margin-top: 22px;">
+                        <a href="/" class="btn-secondary" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; padding: 10px 20px; font-weight: 600;">
+                            <svg class="icon icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                            Back to Main Photobooth Studio
+                        </a>
+                    </div>
                 </section>
             </article>
         </main>
@@ -331,14 +359,16 @@
         <!-- Footer Section -->
         <footer class="app-footer">
             <nav class="footer-nav" aria-label="Footer Navigation">
-                <a href="../index.html">Home Studio</a>
-                <a href="wedding-photobooth.html">Wedding Photo Booth</a>
-                <a href="vintage-photobooth.html">Vintage Booth</a>
-                <a href="korean-photobooth.html">Korean 4-Cut</a>
-                <a href="free-online-webcam-photobooth.html">Free Webcam Booth</a>
-                <a href="../sitemap.xml">Sitemap</a>
+                <a href="/">Home Studio</a>
+                <a href="/p/wedding-photobooth">Wedding Photo Booth</a>
+                <a href="/p/vintage-photobooth">Vintage Booth</a>
+                <a href="/p/korean-photobooth">Korean 4-Cut</a>
+                <a href="/p/free-online-webcam-photobooth">Free Webcam Booth</a>
+                <a href="/privacy-policy">Privacy Policy</a>
+                <a href="/sitemap.xml">Sitemap</a>
             </nav>
-            <p>Photobooth Studio — Privacy-first browser application. Photos remain 100% local on your device.</p>
+            <p>Photobooth Studio &mdash; Privacy-first browser application. Photos remain 100% local on your device.</p>
+            <p class="footer-credit">Powered by <a href="https://weboraco.vercel.app/" target="_blank" rel="noopener noreferrer">Weboraco</a></p>
         </footer>
     </div>
 
@@ -347,7 +377,7 @@
         window.PHOTOBOOTH_CONFIG = {
             slug: "valentines-photobooth",
             defaultFilter: "brightness(1.25) saturate(1.2)",
-            stripStamp: "VALENTINE MEMORIES ♥",
+            stripStamp: "VALENTINE MEMORIES",
             themeColor: "#E53E3E"
         };
     </script>
