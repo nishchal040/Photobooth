@@ -2,16 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="google-site-verification" content="jzF0hNRarNiYU_cQ4i9jl0F8V_RP9Xpi3n844NDCm7E" />
-    <meta name="google-adsense-account" content="ca-pub-4974805835146423">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Photobooth Studio - Instant retro photo strip creator with live camera filters, countdown timer, and high-resolution PNG downloads. Free online web photobooth.">
-    <meta name="keywords" content="online photo booth, virtual photo booth, free online photo booth, online photobooth, photo booth online, virtual photobooth, online selfie booth, webcam photo booth, photo booth with filters, online photo filters, virtual selfie booth, digital photo booth, online polaroid photo booth, photo strip maker, take photos online,webcam photo booth online, browser photo booth, browser selfie booth, instant photo booth, digital selfie booth, online selfie camera, virtual selfie camera, online camera booth, webcam selfie online, webcam photo effects, online camera effects, photo booth effects, selfie effects online, fun photo booth online, interactive photo booth, digital photo experience, virtual camera booth, online picture booth, online picture maker, selfie photo maker, instant selfie maker, online photo creator, online photo editor booth, photo booth app alternative, photo booth without download, photo booth without app, browser based photo booth, camera photo booth online, online event photo booth, virtual event photo booth, wedding selfie booth, party photo booth online, birthday photo booth, corporate photo booth, event selfie booth, digital event photo booth, virtual event selfie booth, online photo strip creator, digital photo strip, photo strip creator, photo collage booth, online polaroid maker, polaroid photo maker online, instant polaroid maker, vintage photo booth online, retro photo booth online, black and white photo booth, sepia photo booth, creative photo booth, fun selfie camera, online selfie creator, webcam selfie effects, browser camera effects, photo capture online,3 photo booth online, three photo booth, 3 picture photo booth, photo strip creator online, online polaroid maker, instant polaroid maker, vintage photo booth, retro photo booth, webcam selfie effects, photo booth effects online, photo capture online, browser camera booth, photo booth without download, photo booth without app">
+    <meta name="keywords" content="photobooth, online photobooth, photo strip maker, camera filters, webcam studio, vintage photos, snapshot studio, download photo strip">
     <meta name="author" content="Photobooth Studio">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#D4537E">
     <link rel="canonical" href="./">
-    <meta name="google-adsense-account" content="ca-pub-4974805835146423">
 
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:type" content="website">
@@ -36,9 +33,9 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Outfit:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chewy&family=Outfit:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Poppins:wght@400;500;600;700&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2">
     <title>Photobooth Studio - Instant Retro Photo Strip Creator</title>
 
     <!-- Structured Data (JSON-LD) for SEO -->
@@ -134,6 +131,34 @@
         <main class="app-content">
             <!-- Studio Camera Section -->
             <section class="studio-section" aria-label="Photo Booth Camera Studio">
+
+                <!-- Dynamic Mode Customizer Bar & Quick Selector -->
+                <div class="modes-selection-container" aria-label="Studio Modes &amp; Templates">
+                    <div class="modes-header">
+                        <span class="modes-label">
+                            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                            Format Customizer &amp; Text Settings:
+                        </span>
+                        <div class="modes-tabs-scroller" role="tablist">
+                            <button class="mode-tab active" data-mode="newspaper" role="tab" aria-selected="true" type="button">Newspaper</button>
+                            <button class="mode-tab" data-mode="y2k" role="tab" aria-selected="false" type="button">Y2K</button>
+                            <button class="mode-tab" data-mode="movie" role="tab" aria-selected="false" type="button">Movie</button>
+                            <button class="mode-tab" data-mode="yearbook" role="tab" aria-selected="false" type="button">Yearbook</button>
+                            <button class="mode-tab" data-mode="album" role="tab" aria-selected="false" type="button">Album</button>
+                            <button class="mode-tab" data-mode="strip" role="tab" aria-selected="false" type="button">Strip</button>
+                            <button class="mode-tab" data-mode="breakingnews" role="tab" aria-selected="false" type="button">News</button>
+                            <button class="mode-tab" data-mode="tradingcard" role="tab" aria-selected="false" type="button">Trading Card</button>
+                            <button class="mode-tab" data-mode="comic" role="tab" aria-selected="false" type="button">Comic</button>
+                            <button class="mode-tab" data-mode="polaroid" role="tab" aria-selected="false" type="button">Polaroid</button>
+                        </div>
+                    </div>
+
+                    <!-- Dynamic Mode Customizer Bar -->
+                    <div class="mode-customizer-bar" id="mode-customizer-bar">
+                        <!-- Populated by script.js -->
+                    </div>
+                </div>
+
                 <!-- Filter Bar Navigation -->
                 <nav id="filters" aria-label="Photo Filter Selection">
                     <span class="filter-label">Filters:</span>
@@ -148,15 +173,21 @@
 
                 <!-- Main Studio Workspace Container -->
                 <div class="container">
-                    <!-- Photostrip Output Side -->
-                    <aside class="photostrip-wrapper" aria-label="Captured Photo Strip">
+                    <!-- Output Frame Side -->
+                    <aside class="photostrip-wrapper" aria-label="Captured Photo Output" id="studio-output-aside">
                         <div class="photostrip-header">
-                            <span class="strip-brand">📷 PHOTOBOOTH</span>
-                            <span id="photo-count-badge" class="strip-count">0/3</span>
+                            <span class="strip-brand"><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg> <span id="output-mode-label">RETRO NEWSPAPER</span></span>
+                            <div class="header-right-tools">
+                                <button type="button" id="toggle-demo-btn" class="btn-demo-badge" title="Switch between Reference Demo and Live/Uploaded Photos">
+                                    <span class="demo-dot"></span>
+                                    <span id="demo-badge-text">Sample Demo</span>
+                                </button>
+                                <span id="photo-count-badge" class="strip-count">0/1</span>
+                            </div>
                         </div>
                         <div id="photos" class="photostrip-frame">
                             <div class="empty-placeholder">
-                                <span>Press "Cheese!" to take your 1st photo</span>
+                                <span>Loading preview...</span>
                             </div>
                         </div>
                     </aside>
@@ -165,6 +196,9 @@
                     <article class="preview-card" aria-label="Camera Viewfinder">
                         <div class="video-wrapper">
                             <video id="camera" autoplay playsinline title="Live Camera Feed"></video>
+
+                            <!-- Live Mode Viewfinder HUD Overlays -->
+                            <div id="viewfinder-hud" class="viewfinder-hud"></div>
 
                             <!-- Visual Overlay Elements -->
                             <div id="flash-overlay" class="flash-effect" aria-hidden="true"></div>
@@ -179,11 +213,27 @@
 
                         <!-- Action Control Buttons Toolbar -->
                         <div class="btns-toolbar">
-                            <button id="flip-btn" class="flip-btn" aria-label="Flip Camera or Mirror Toggle" title="Flip Camera / Mirror">↺</button>
-                            <button id="timer-toggle" class="btn-secondary" aria-label="Toggle 3-second countdown timer" title="Toggle 3s Timer">⏱️ <span id="timer-label">Off</span></button>
+                            <button id="flip-btn" class="flip-btn" aria-label="Flip Camera or Mirror Toggle" title="Flip Camera / Mirror">
+                                <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 21h5v-5"/></svg>
+                            </button>
+                            <button id="timer-toggle" class="btn-secondary" aria-label="Toggle 3-second countdown timer" title="Toggle 3s Timer">
+                                <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2"/><path d="M12 2v3"/><path d="m18 5-1.5 1.5"/><path d="m6 5 1.5 1.5"/></svg>
+                                <span id="timer-label">Off</span>
+                            </button>
+                            <label for="upload-photo-input" class="btn-secondary" title="Upload Photo from Device" id="upload-label" style="cursor: pointer;">
+                                <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                                <span>Upload</span>
+                                <input type="file" id="upload-photo-input" accept="image/*" style="display: none;">
+                            </label>
                             <button id="snap" class="btn-snap" aria-label="Capture Photo">Cheese!</button>
-                            <button id="reset-btn" class="btn-secondary" aria-label="Clear and Retake Photos" title="Reset Photos">🔄 Retake</button>
-                            <button id="download" class="btn-download" aria-label="Download Photo Strip PNG">💾 Download</button>
+                            <button id="reset-btn" class="btn-secondary" aria-label="Clear and Retake Photos" title="Reset Photos">
+                                <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+                                Retake
+                            </button>
+                            <button id="download" class="btn-download" aria-label="Download Photo Strip PNG">
+                                <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                Download
+                            </button>
                         </div>
                         <canvas id="canvas" style="display:none;"></canvas>
                     </article>
@@ -194,51 +244,66 @@
             <article class="seo-article" id="categories">
                 <!-- Programmatic Hub Matrix -->
                 <section class="seo-card seo-related-hub">
-                    <h2>🌟 Browse Photobooth Styles & Occasions</h2>
+                    <h2>
+                        <svg class="icon icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                        Browse Photobooth Styles &amp; Occasions
+                    </h2>
                     <p>Select a themed photo booth customized with specialized filter presets, branded stamps, and event guides:</p>
 
                     <div class="seo-category-group">
-                        <h3>🎉 Events & Celebrations</h3>
+                        <h3>
+                            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12v10H4V12"/><rect width="20" height="5" x="2" y="7"/><line x1="12" x2="12" y1="22" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+                            Events &amp; Celebrations
+                        </h3>
                         <div class="seo-pills-grid">
-                            <a href="p/wedding-photobooth.html" class="seo-pill">💒 Wedding Photo Booth</a>
-                            <a href="p/birthday-photobooth.html" class="seo-pill">🎂 Birthday Photo Booth</a>
-                            <a href="p/graduation-photobooth.html" class="seo-pill">🎓 Graduation Celebration</a>
-                            <a href="p/baby-shower-photobooth.html" class="seo-pill">🍼 Baby Shower Booth</a>
-                            <a href="p/bachelorette-photobooth.html" class="seo-pill">💍 Bachelorette Party</a>
-                            <a href="p/valentines-photobooth.html" class="seo-pill">💖 Valentine's Day Booth</a>
-                            <a href="p/halloween-photobooth.html" class="seo-pill">🎃 Halloween Spooky Booth</a>
-                            <a href="p/christmas-photobooth.html" class="seo-pill">🎄 Christmas Holiday Booth</a>
-                            <a href="p/party-photo-strip-maker.html" class="seo-pill">🥳 Party Strip Maker</a>
+                            <a href="/p/wedding-photobooth" class="seo-pill"><svg class="icon icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg> Wedding Photo Booth</a>
+                            <a href="/p/birthday-photobooth" class="seo-pill"><svg class="icon icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"/><path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1"/><path d="M2 21h20"/><path d="M7 8v3"/><path d="M12 8v3"/><path d="M17 8v3"/></svg> Birthday Photo Booth</a>
+                            <a href="/p/graduation-photobooth" class="seo-pill"><svg class="icon icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg> Graduation Celebration</a>
+                            <a href="/p/baby-shower-photobooth" class="seo-pill"><svg class="icon icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg> Baby Shower Booth</a>
+                            <a href="/p/bachelorette-photobooth" class="seo-pill"><svg class="icon icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="7"/><path d="M12 2v3"/><path d="M12 19v3"/></svg> Bachelorette Party</a>
+                            <a href="/p/valentines-photobooth" class="seo-pill"><svg class="icon icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg> Valentine's Day Booth</a>
+                            <a href="/p/halloween-photobooth" class="seo-pill"><svg class="icon icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m13 2-2 2.5V8"/><path d="M12 8C6.5 8 3 11.5 3 16c0 4 3.5 6 9 6s9-2 9-6c0-4.5-3.5-8-9-8z"/><path d="m9 13 1 1-1 1"/><path d="m15 13-1 1 1 1"/></svg> Halloween Spooky Booth</a>
+                            <a href="/p/christmas-photobooth" class="seo-pill"><svg class="icon icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 8 8h3l-3 6h3l-4 6h16l-4-6h3l-3-6h3z"/><line x1="12" y1="20" x2="12" y2="22"/></svg> Christmas Holiday Booth</a>
+                            <a href="/p/party-photo-strip-maker" class="seo-pill"><svg class="icon icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Party Strip Maker</a>
                         </div>
                     </div>
 
                     <div class="seo-category-group">
-                        <h3>🎨 Aesthetic & Filter Presets</h3>
+                        <h3>
+                            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+                            Aesthetic &amp; Filter Presets
+                        </h3>
                         <div class="seo-pills-grid">
-                            <a href="p/vintage-photobooth.html" class="seo-pill">🎞️ Vintage Sepia Studio</a>
-                            <a href="p/black-and-white-photobooth.html" class="seo-pill">🖤 Black & White Studio</a>
-                            <a href="p/korean-photobooth.html" class="seo-pill">✨ Korean 4-Cut (Life4Cuts)</a>
-                            <a href="p/retro-90s-photobooth.html" class="seo-pill">📼 90s Mall Arcade Booth</a>
-                            <a href="p/y2k-photobooth.html" class="seo-pill">🌸 Y2K 2000s Aesthetic</a>
-                            <a href="p/cyberpop-photobooth.html" class="seo-pill">⚡ Cyberpop Neon Glow</a>
-                            <a href="p/sepia-photostrip-maker.html" class="seo-pill">📜 Antique Sepia Strips</a>
+                            <a href="/p/vintage-photobooth" class="seo-pill"><svg class="icon icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="2.18" ry="2.18"/><line x1="7" x2="7" y1="2" y2="22"/><line x1="17" x2="17" y1="2" y2="22"/><line x1="2" x2="22" y1="12" y2="12"/><line x1="2" x2="7" y1="7" y2="7"/><line x1="2" x2="7" y1="17" y2="17"/><line x1="17" x2="22" y1="17" y2="17"/><line x1="17" x2="22" y1="7" y2="7"/></svg> Vintage Sepia Studio</a>
+                            <a href="/p/black-and-white-photobooth" class="seo-pill"><svg class="icon icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0 1 0 20z" fill="currentColor"/></svg> Black &amp; White Studio</a>
+                            <a href="/p/korean-photobooth" class="seo-pill"><svg class="icon icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg> Korean 4-Cut (Life4Cuts)</a>
+                            <a href="/p/retro-90s-photobooth" class="seo-pill"><svg class="icon icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="8" cy="12" r="2"/><circle cx="16" cy="12" r="2"/><path d="M4 6v12"/><path d="M20 6v12"/></svg> 90s Mall Arcade Booth</a>
+                            <a href="/p/y2k-photobooth" class="seo-pill"><svg class="icon icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/></svg> Y2K 2000s Aesthetic</a>
+                            <a href="/p/cyberpop-photobooth" class="seo-pill"><svg class="icon icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Cyberpop Neon Glow</a>
+                            <a href="/p/sepia-photostrip-maker" class="seo-pill"><svg class="icon icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/></svg> Antique Sepia Strips</a>
                         </div>
                     </div>
 
                     <div class="seo-category-group">
-                        <h3>🛠️ Free Online Tools</h3>
+                        <h3>
+                            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                            Free Online Tools
+                        </h3>
                         <div class="seo-pills-grid">
-                            <a href="p/free-online-webcam-photobooth.html" class="seo-pill">💻 Free Online Webcam Booth</a>
-                            <a href="p/3-photo-strip-maker.html" class="seo-pill">📸 3-Photo Strip Maker</a>
-                            <a href="p/virtual-photobooth.html" class="seo-pill">🌐 Virtual Zoom Photo Booth</a>
-                            <a href="p/digital-polaroid-photobooth.html" class="seo-pill">📷 Digital Polaroid Booth</a>
+                            <a href="/p/free-online-webcam-photobooth" class="seo-pill"><svg class="icon icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg> Free Online Webcam Booth</a>
+                            <a href="/p/3-photo-strip-maker" class="seo-pill"><svg class="icon icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg> 3-Photo Strip Maker</a>
+                            <a href="/p/virtual-photobooth" class="seo-pill"><svg class="icon icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" x2="22" y1="12" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> Virtual Zoom Photo Booth</a>
+                            <a href="/p/digital-polaroid-photobooth" class="seo-pill"><svg class="icon icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg> Digital Polaroid Booth</a>
                         </div>
                     </div>
                 </section>
 
                 <!-- Features & How-It-Works -->
                 <section class="seo-card">
-                    <h2>✨ How It Works</h2>
+                    <h2>
+                        <svg class="icon icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+                        How It Works
+                    </h2>
                     <div class="seo-steps-container">
                         <div class="step-card">
                             <div class="step-badge">1</div>
@@ -260,7 +325,10 @@
 
                 <!-- Frequently Asked Questions -->
                 <section class="seo-card">
-                    <h2>❓ Frequently Asked Questions</h2>
+                    <h2>
+                        <svg class="icon icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>
+                        Frequently Asked Questions
+                    </h2>
                     <div class="seo-faq-section">
                         <div class="faq-item">
                             <button class="faq-item-question" type="button">
@@ -297,18 +365,20 @@
         <!-- Footer Section -->
         <footer class="app-footer">
             <nav class="footer-nav" aria-label="Footer Navigation">
-                <a href="index.html">Home</a>
-                <a href="p/wedding-photobooth.html">Wedding Photo Booth</a>
-                <a href="p/vintage-photobooth.html">Vintage Booth</a>
-                <a href="p/korean-photobooth.html">Korean 4-Cut</a>
-                <a href="p/birthday-photobooth.html">Birthday Booth</a>
-                <a href="p/free-online-webcam-photobooth.html">Free Webcam Booth</a>
-                <a href="sitemap.xml">XML Sitemap</a>
+                <a href="/">Home</a>
+                <a href="/p/wedding-photobooth">Wedding Photo Booth</a>
+                <a href="/p/vintage-photobooth">Vintage Booth</a>
+                <a href="/p/korean-photobooth">Korean 4-Cut</a>
+                <a href="/p/birthday-photobooth">Birthday Booth</a>
+                <a href="/p/free-online-webcam-photobooth">Free Webcam Booth</a>
+                <a href="/privacy-policy">Privacy Policy</a>
+                <a href="/sitemap.xml">XML Sitemap</a>
             </nav>
             <p>Photobooth Studio — Privacy-first browser application. Photos remain 100% local on your device.</p>
+            <p class="footer-credit">Powered by <a href="https://weboraco.vercel.app/" target="_blank" rel="noopener noreferrer">Weboraco</a></p>
         </footer>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=2"></script>
 </body>
 </html>
